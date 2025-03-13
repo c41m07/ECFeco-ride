@@ -1,0 +1,102 @@
+Document de Planification – Projet EcoRide
+1. Introduction
+EcoRide est une startup française visant à réduire l’impact environnemental des déplacements en encourageant le covoiturage. Ce projet consiste à développer une application web (et potentiellement mobile) dédiée à la gestion et à la promotion du covoiturage, tout en mettant en avant une identité visuelle et un thème en accord avec les valeurs écologiques.
+
+2. Objectifs du Projet
+Fonctionnels :
+Créer une plateforme intuitive pour rechercher, proposer et participer à des covoiturages.
+Gérer les comptes utilisateurs avec inscription, connexion et espace personnalisé (changement de rôle entre chauffeur et passager).
+Permettre aux utilisateurs de filtrer et consulter les itinéraires disponibles, incluant détails sur le véhicule, le conducteur et le voyage (notamment l’aspect écologique pour les voitures électriques).
+Non fonctionnels :
+Garantir la sécurité de l’application (gestion sécurisée des mots de passe, protection contre les injections SQL, etc.).
+Assurer une bonne performance et une compatibilité sur différents supports (bureau et mobile).
+Offrir une interface ergonomique et un design en cohérence avec une charte graphique écologique.
+3. Contexte et Exigences
+Contexte :
+La plateforme a pour vocation de devenir la principale solution de covoiturage pour des voyageurs soucieux de l’environnement.
+Exigences issues de l’énoncé :
+Pages spécifiques (page d’accueil, vue des covoiturages, espace utilisateur, etc.) avec des fonctionnalités détaillées dans les US (User Stories) 1 à 13.
+Intégration d’un système de gestion de crédits pour les transactions liées aux covoiturages.
+Utilisation d’une base de données relationnelle (MySQL, MariaDB ou PostgreSQL) et d’une base NoSQL (par exemple, MongoDB) pour certaines fonctionnalités spécifiques.
+4. Analyse des Besoins
+4.1 Besoins Fonctionnels
+Page d’accueil : Présentation de l’entreprise, barre de recherche d’itinéraires et pied de page avec informations légales.
+Navigation : Menu permettant d’accéder aux covoiturages, à la connexion, au contact, etc.
+Recherche d’itinéraires : Formulaire de saisie (adresse de départ, arrivée, date) avec affichage conditionnel des résultats.
+Gestion des covoiturages : Affichage des détails, filtres (prix, durée, note, caractère écologique) et bouton de participation.
+Espace Utilisateur : Création et gestion de compte, saisie de voyage, historique des trajets, etc.
+Interface Administrateur/Employé : Validation des avis et gestion des comptes.
+4.2 Besoins Non Fonctionnels
+Sécurité : Mise en place d’une authentification sécurisée et de mesures contre les failles (XSS, injections SQL, etc.).
+Performance : Optimisation des temps de chargement et gestion efficace de la recherche en base de données.
+Accessibilité : Responsive design pour une utilisation sur ordinateurs et appareils mobiles.
+5. Choix de la Stack Technique
+Front-end :
+HTML5, CSS (avec Bootstrap pour accélérer le développement), JavaScript (ou framework tel que React si souhaité).
+Back-end :
+PHP avec PDO ou Node.js (selon la préférence et le niveau de confort) pour le traitement côté serveur.
+Bases de Données :
+Base relationnelle : MySQL, MariaDB ou PostgreSQL pour la gestion des données principales.
+Base NoSQL : MongoDB pour les fonctionnalités spécifiques (par exemple, la gestion de logs ou d’historique).
+Outils de Déploiement et Gestion de Projet :
+GitHub pour le versioning et le partage du code.
+Trello, Notion ou Jira pour le suivi des tâches et la gestion du Kanban.
+Plateformes de déploiement comme Heroku, Vercel ou Azure pour héberger l’application.
+6. Planification et Répartition des Tâches
+6.1 Découpage en Phases
+Phase 1 : Analyse et Conception (environ 10 h)
+
+Relecture de l’énoncé
+Identification des besoins et rédaction du document de planification
+Maquettage des interfaces (wireframes et mockups)
+Phase 2 : Développement Front-end (environ 15 h)
+
+Création de la structure HTML/CSS
+Intégration des maquettes et mise en place des fonctionnalités interactives (barre de recherche, filtres, etc.)
+Phase 3 : Développement Back-end (environ 15 h)
+
+Mise en place des bases de données
+Développement des API ou des scripts côté serveur pour la gestion des utilisateurs et des covoiturages
+Phase 4 : Intégration et Tests (environ 10 h)
+
+Intégration front-end/back-end
+Réalisation de tests unitaires et fonctionnels
+Phase 5 : Déploiement et Documentation (environ 5 h)
+
+Déploiement de l’application sur une plateforme choisie
+Rédaction du README, manuel d’utilisation et documentation technique
+Phase 6 : Gestion de Projet et Révisions (environ 5 h)
+
+Suivi des tâches sur un outil de gestion de projet
+Révisions finales, correction de bugs et améliorations
+6.2 Organisation en Tâches
+Chaque User Story (US 1 à US 13) sera décomposée en sous-tâches :
+
+Maquettage de l’interface
+Développement du composant front-end
+Implémentation des règles de gestion côté serveur
+Tests et validations
+Documentation des choix techniques et des fonctionnalités
+7. Gestion de Projet et Suivi
+Méthodologie : Approche Agile avec utilisation d’un tableau Kanban (colonnes « À faire », « En cours », « Terminé »).
+Réunions de suivi : Points réguliers pour faire le point sur l’avancement, ajuster le planning et traiter les imprévus.
+Outils :
+Git pour le contrôle de version (branche principale pour la version stable, branche de développement pour les tests et intégrations).
+Trello ou Notion pour la gestion des tâches.
+8. Livrables Attendus
+Le code source de l’application hébergé sur un dépôt GitHub public.
+L’application déployée et accessible en ligne.
+Un dossier de documentation comprenant :
+Un README.md détaillé pour le déploiement local.
+La charte graphique (palette de couleurs, typographies, maquettes).
+Une documentation technique (architecture, choix technologiques, schémas de données).
+Un manuel d’utilisation.
+9. Déploiement
+Choix de la plateforme : Par exemple, Heroku, Vercel ou Azure pour héberger l’application.
+Procédure :
+Préparation de l’environnement de production.
+Déploiement continu avec intégration de Git.
+Tests de performance et mise en ligne.
+10. Conclusion
+Ce document de planification permet de structurer et de clarifier les différentes étapes du projet EcoRide. Il constitue la feuille de route pour le développement de l’application, depuis l’analyse des besoins jusqu’au déploiement final et à la documentation complète.
+L’objectif est de garantir une démarche structurée, respectant les exigences du sujet et assurant la qualité du produit final.
