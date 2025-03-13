@@ -1,0 +1,19 @@
+Front-end
+HTML5 pour la structure des pages.
+CSS avec Bootstrap pour accélérer le développement et garantir un design responsive.
+JavaScript (vanilla ou avec une librairie comme jQuery) pour ajouter de l’interactivité sur les pages.
+Back-end
+PHP 8 en utilisant PDO pour la gestion sécurisée des accès à la base de données.
+Mise en place d’une architecture de type MVC (Modèle-Vue-Contrôleur) pour organiser le code de façon claire et évolutive.
+Serveur web Apache ou Nginx selon l’environnement d’hébergement.
+Bases de données
+Base relationnelle : MySQL (ou MariaDB/PostgreSQL) pour stocker les données principales (utilisateurs, covoiturages, réservations, etc.).
+Base NoSQL : MongoDB pour gérer des données non structurées, comme des logs ou des informations complémentaires qui ne nécessitent pas de schéma fixe.
+Déploiement et outils associés
+Contrôle de version : Utilisation de Git avec un dépôt public sur GitHub.
+Plateforme de déploiement :
+Par exemple, Heroku ou Fly.io pour héberger l’application et gérer facilement les déploiements.
+Intégration continue (CI/CD) pour automatiser les tests et les mises à jour.
+Gestion de projet et documentation
+Outils de gestion de projet : Trello, Notion ou Jira pour suivre l’avancement des tâches via un tableau Kanban.
+Documentation : Rédaction d’un README.md détaillé expliquant comment déployer l’application en local et une documentation technique pour justifier les choix technologiques et décrire l’architecture.
