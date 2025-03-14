@@ -1,10 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
+  <!-- En-tête de la page avec les métadonnées -->
   <meta charset="UTF-8">
-  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoRide - Votre solution de covoiturage écologique">
+  <meta name="keywords" content="EcoRide, covoiturage, écologique, transport">
+  <meta name="author" content="Équipe EcoRide">
+  <title>EcoRide - Accueil</title>
+
+  <!-- Importation de la bibliothèque Bootstrap pour le style -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Lien vers la feuille de style personnalisée -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- Barre de navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Marque/logo de la navigation -->
+  <a class="navbar-brand" href="#">
+    <img src="./img/Logo.png" alt="Logo EcoRide" width="30" height="30">
+    EcoRide
+  </a>
+  <!-- Bouton pour ouvrir la barre de navigation sur mobile -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- Liens de navigation -->
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <!-- Lien vers la page d'accueil -->
+        <a class="nav-link" href="#">Accueil</a>
+      </li>
+      <li class="nav-item">
+        <!-- Lien vers les covoiturages -->
+        <a class="nav-link" href="#">Covoiturages</a>
+      </li>
+      <li class="nav-item">
+        <!-- Lien vers la page de contact -->
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+      <li class="nav-item">
+        <!-- Lien pour se connecter -->
+        <a class="nav-link btn btn-primary text-white" href="#">Connexion</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Section héros avec image de fond -->
+<section class="hero text-center d-flex align-items-center justify-content-center presentation">
+  <div>
+    <h1 class="display-4">EcoRide</h1>
+    <p class="lead">Votre solution de covoiturage écologique</p>
+  </div>
+</section>
+
+<!-- Présentation de l'entreprise -->
+<section class="container my-5">
+  <h2 class="text-center mb-4">À propos d’EcoRide</h2>
+  <p class="text-justify">
+    EcoRide est une entreprise de covoiturage éco-responsable, dont la mission est de réduire l’empreinte
+    carbone des trajets quotidiens tout en facilitant la mobilité pour tous. Notre équipe travaille chaque
+    jour à améliorer l’expérience utilisateur et à proposer des solutions innovantes pour rendre le
+    covoiturage plus accessible et plus sûr.
+  </p>
+</section>
+
+<!-- Section de recherche d'itinéraires -->
+<section class="search-section container my-5">
+  <h2 class="text-center mb-4">Rechercher un trajet</h2>
+  <form>
+    <div class="form-row">
+      <!-- Champ pour l'adresse de départ -->
+      <div class="form-group col-md-4">
+        <label for="depart">Adresse de départ</label>
+        <input type="text" class="form-control" id="depart" placeholder="Entrez l'adresse de départ">
+      </div>
+      <!-- Champ pour l'adresse d'arrivée -->
+      <div class="form-group col-md-4">
+        <label for="arrivee">Adresse d'arrivée</label>
+        <input type="text" class="form-control" id="arrivee" placeholder="Entrez l'adresse d'arrivée">
+      </div>
+      <!-- Champ pour la date du trajet -->
+      <div class="form-group col-md-4">
+        <label for="date">Date</label>
+        <input type="date" class="form-control" id="date">
+      </div>
+    </div>
+    <!-- Bouton pour lancer la recherche -->
+    <button type="submit" class="btn btn-primary mt-3">Rechercher</button>
+  </form>
+</section>
+
+<!-- Section "Pourquoi choisir EcoRide ?" -->
+<section class="presentation-section container my-5">
+  <h2 class="text-center mb-4">Pourquoi choisir EcoRide&nbsp;?</h2>
+  <div class="row">
+    <!-- Présentation des avantages environnementaux -->
+    <div class="col-md-6 mb-4">
+      <h3>Respectueux de l'environnement</h3>
+      <p>Réduisez votre empreinte carbone en partageant vos trajets.</p>
+    </div>
+    <!-- Présentation des avantages économiques -->
+    <div class="col-md-6 mb-4">
+      <h3>Économique</h3>
+      <p>Faites des économies sur le transport en covoiturant.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section "Nos fonctionnalités" -->
+<section class="presentation-section container my-5">
+  <h2 class="text-center mb-4">Nos fonctionnalités</h2>
+  <div class="row">
+    <!-- Présentation de l'interface utilisateur -->
+    <div class="col-md-6 mb-4">
+      <h3>Interface intuitive</h3>
+      <p>Notre plateforme est simple d'utilisation et efficace.</p>
+    </div>
+    <!-- Présentation des mesures de sécurité -->
+    <div class="col-md-6 mb-4">
+      <h3>Sécurité</h3>
+      <p>Nous assurons une authentification sécurisée et une protection de vos données.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Pied de page -->
+<footer class="bg-light text-center py-3">
+  <p>&copy; 2023 EcoRide. Tous droits réservés.</p>
+  <!-- Ajout de l'e-mail de l’entreprise -->
+  <p>Contact : <a href="mailto:contact@ecoride.com">contact@ecoride.com</a></p>
+  <!-- Lien vers les mentions légales (à créer) -->
+  <p><a href="mentions-legales.html">Mentions légales</a></p>
+</footer>
+
+<!-- Importation des scripts JavaScript nécessaires pour Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

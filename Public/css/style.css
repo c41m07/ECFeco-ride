@@ -1,0 +1,20 @@
+/* File: css/style.css */
+
+/* Custom styles for EcoRide project */
+body {
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.presentation {
+    background-image: url('/Public/img/Background.webp');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    color: white;"
+}
+
+/* Additional custom CSS can be added here */
