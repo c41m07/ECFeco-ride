@@ -50,7 +50,7 @@ body {
 
 /* Section de présentation */
 .presentation {
-    background-image: url('/Public/img/Background.webp');
+    background-image: url('/public/asset/imget/img/Background.webp');
     background-size: cover;
     background-position: center;
     min-height: 400px;
