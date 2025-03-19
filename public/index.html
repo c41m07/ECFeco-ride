@@ -1,278 +1,403 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- En-tête de la page avec les métadonnées -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="EcoRide - Votre solution de covoiturage écologique">
-  <meta name="keywords" content="EcoRide, covoiturage, écologique, transport">
-  <meta name="author" content="Équipe EcoRide">
-  <title>EcoRide - Accueil</title>
+    <!-- Encodage des caractères -->
+    <meta charset="UTF-8">
+    <!-- Rendre la page responsive sur mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Description pour le SEO -->
+    <meta name="description" content="EcoRide est votre partenaire pour des déplacements écologiques, économiques et responsables. Rejoignez une communauté qui partage vos valeurs.">
 
-  <!-- Importation de Bootstrap minifié via CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Lien vers la feuille de style personnalisée -->
-  <link rel="stylesheet" href="asset/css/style.css">
+    <title>EcoRide - Voyager autrement</title>
+
+    <!-- Lien vers la librairie Bootstrap (CSS) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <!-- Lien vers la feuille de style personnalisée -->
+    <link rel="stylesheet" href="../public/asset/css/styles.css">
+    <!-- Lien vers Font awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
+<!-- ================================================= -->
+<!-- Barre de navigation (Header) -->
+<!-- ================================================= -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container navborder">
+        <!-- Logo et nom de la marque -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <!-- Image du logo (remplacer par ton image) -->
+            <img src="../public/asset/img/logo.png" alt="Logo EcoRide" class="me-2 rounded-circle">
+            <span class="fw-bold">EcoRide</span>
+        </a>
 
-<!-- Barre de navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <!-- Marque/logo de la navigation -->
-    <a class="navbar-brand" href="#">
-      <img src="asset/img/Logo.png" alt="Logo EcoRide" width="30" height="30">
-      EcoRide
-    </a>
-    <!-- Bouton pour ouvrir la barre de navigation sur mobile -->
-    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- Liens de navigation -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <!-- Lien vers la page d'accueil -->
-          <a class="nav-link" href="#">Accueil</a>
-        </li>
-        <li class="nav-item">
-          <!-- Lien vers les covoiturages -->
-          <a class="nav-link" href="#">Covoiturages</a>
-        </li>
-        <li class="nav-item">
-          <!-- Lien vers la page de contact -->
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-        <li class="nav-item">
-          <!-- Lien pour se connecter -->
-          <a class="nav-link btn btn-primary text-white" href="#">Connexion</a>
-        </li>
-      </ul>
+        <!-- Bouton pour afficher/masquer le menu sur mobile -->
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu de navigation -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Liens centrés -->
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">À propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+            </ul>
+            <!
+            <!-- Bouton "Connexion" vert arrondi -->
+            <a href="#" class="btn btn-success btn-contact">Connexion</a>
+        </div>
     </div>
-  </div>
 </nav>
 
-<!-- Section héros avec image de fond -->
-<section class="hero text-center d-flex align-items-center justify-content-center presentation">
-  <div>
-    <h1 class="display-4">EcoRide</h1>
-    <p class="lead">Votre solution de covoiturage écologique</p>
-  </div>
-</section>
-
-<!-- Présentation de l'entreprise -->
-<section class="container my-5 about">
-  <h2 class="text-center mb-4">À propos d’EcoRide</h2>
-  <p class="text-start">
-    EcoRide est une entreprise de covoiturage éco-responsable, dont la mission est de réduire l’empreinte
-    carbone des trajets quotidiens tout en facilitant la mobilité pour tous. Notre équipe travaille chaque
-    jour à améliorer l’expérience utilisateur et à proposer des solutions innovantes pour rendre le
-    covoiturage plus accessible et plus sûr.
-  </p>
-</section>
-
-<!-- Section de recherche d'itinéraires -->
-<section class="search-section container my-5 trajet">
-  <h2 class="text-center mb-4">Rechercher un trajet</h2>
-  <form>
-    <div class="row">
-      <!-- Champ pour l'adresse de départ -->
-      <div class="form-group col-md-4">
-        <label for="depart">Adresse de départ</label>
-        <input type="text" class="form-control" id="depart" placeholder="Entrez l'adresse de départ">
-      </div>
-      <!-- Champ pour l'adresse d'arrivée -->
-      <div class="form-group col-md-4">
-        <label for="arrivee">Adresse d'arrivée</label>
-        <input type="text" class="form-control" id="arrivee" placeholder="Entrez l'adresse d'arrivée">
-      </div>
-      <!-- Champ pour la date du trajet -->
-      <div class="form-group col-md-4">
-        <label for="date">Date</label>
-        <input type="date" class="form-control" id="date">
-      </div>
-      <button type="submit" class="btn btn-primary mt-4">Rechercher</button>
-    </div>
-    <!-- Bouton pour lancer la recherche -->
-
-  </form>
-</section>
-
-<!-- Section "Pourquoi choisir EcoRide ?" -->
-<section class="presentation-section container my-5 why">
-  <h2 class="text-center mb-4">Pourquoi choisir EcoRide&nbsp;?</h2>
-  <div class="row gy-4">
-    <!-- Présentation des avantages environnementaux -->
-    <div class="col-md-6">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <h3 class="card-title">Respectueux de l'environnement</h3>
-          <ul class="list-unstyled">
-            <li>
-              <strong>Réduction de l’empreinte carbone :</strong>
-              <p class="mb-2">
-                En optant pour un système de covoiturage, vous limitez le nombre de véhicules en circulation.
-                Cela se traduit directement par une baisse des émissions de CO₂ et une diminution de la pollution atmosphérique.
-              </p>
-            </li>
-            <li>
-              <strong>Contribution à la préservation des ressources naturelles :</strong>
-              <p class="mb-2">
-                Moins de voitures sur la route signifie également une réduction de la consommation de carburant,
-                et donc une moindre pression sur les ressources fossiles.
-              </p>
-            </li>
-            <li>
-              <strong>Sensibilisation écologique :</strong>
-              <p class="mb-0">
-                En mettant en avant l’aspect « vert » de vos trajets, vous encouragez les utilisateurs à adopter
-                des comportements plus respectueux de la planète (ex. utilisation des transports partagés,
-                choix d’itinéraires plus courts, etc.).
-              </p>
-            </li>
-          </ul>
+<!-- ================================================= -->
+<!-- Section Hero (Bannière principale) -->
+<!-- ================================================= -->
+<section class="hero-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Zone de texte dans la Hero Section -->
+            <div class="col-md-6">
+                <h1 class="display-5 fw-bold mb-3">Voyagez autrement avec EcoRide</h1>
+                <p class="lead mb-4">
+                    EcoRide est votre partenaire pour des déplacements écologiques, économiques et responsables.
+                    Rejoignez une communauté qui partage vos valeurs.
+                </p>
+                <a href="#" class="btn btn-success btn-lg">Commencer maintenant !</a>
+            </div>
+            <!-- Image d'illustration de la Hero Section -->
+            <div class="col-md-6 text-center mt-4 mt-md-0">
+                <img src="../public/asset/img/paysage2.jpg" class="img-fluid rounded" alt="Illustration EcoRide">
+            </div>
         </div>
-      </div>
     </div>
-
-    <!-- Présentation des avantages économiques -->
-    <div class="col-md-6">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <h3 class="card-title">Économique</h3>
-          <ul class="list-unstyled">
-            <li>
-              <strong>Partage des frais :</strong>
-              <p class="mb-2">
-                Le covoiturage permet de répartir le coût du trajet entre plusieurs passagers.
-                Ainsi, chaque utilisateur réalise des économies substantielles sur ses déplacements
-                (carburant, péages, stationnement…).
-              </p>
-            </li>
-            <li>
-              <strong>Coût d’utilisation réduit :</strong>
-              <p class="mb-2">
-                En comparaison avec l’achat ou l’entretien d’un véhicule personnel, EcoRide propose
-                un modèle économique avantageux. Vous payez uniquement pour le trajet dont vous avez besoin,
-                quand vous en avez besoin.
-              </p>
-            </li>
-            <li>
-              <strong>Optimisation des trajets :</strong>
-              <p class="mb-0">
-                En regroupant les passagers se rendant dans la même direction, on réduit le gaspillage lié
-                aux trajets effectués avec des véhicules partiellement remplis. Cela profite à tous,
-                autant financièrement qu’écologiquement.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
-<!-- Section "Nos fonctionnalités" -->
-<section class="presentation-section container my-5 function">
-  <h2 class="text-center mb-4">Nos fonctionnalités</h2>
-  <div class="row gy-4">
-    <!-- Présentation de l'interface utilisateur -->
-    <div class="col-md-6">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <h3 class="card-title">Interface intuitive</h3>
-          <ul class="list-unstyled">
-            <li>
-              <strong>Ergonomie soignée :</strong>
-              <p class="mb-2">
-                L’application (ou le site) est conçue avec une navigation claire et des menus simples,
-                permettant aux utilisateurs de trouver rapidement les fonctionnalités essentielles
-                (recherche de trajets, réservation, suivi…).
-              </p>
-            </li>
-            <li>
-              <strong>Processus de réservation fluide :</strong>
-              <p class="mb-2">
-                Que ce soit pour proposer ou réserver un trajet, tout se fait en quelques clics.
-                Les formulaires sont courts et les informations sont affichées de façon lisible.
-              </p>
-            </li>
-            <li>
-              <strong>Adaptée à tous les supports :</strong>
-              <p class="mb-2">
-                L’interface est responsive, c’est-à-dire qu’elle s’adapte automatiquement aux différents écrans
-                (smartphone, tablette, ordinateur). Cela garantit une expérience utilisateur agréable,
-                où que vous soyez.
-              </p>
-            </li>
-            <li>
-              <strong>Guides et assistance :</strong>
-              <p class="mb-0">
-                Des tutoriels et une FAQ détaillée sont mis à disposition pour accompagner l’utilisateur,
-                notamment les nouveaux inscrits, afin qu’ils se familiarisent rapidement avec la plateforme.
-              </p>
-            </li>
-          </ul>
+<!-- ================================================= -->
+<!-- Section Témoignages (Exemples d’utilisateurs) -->
+<!-- ================================================= -->
+<!--
+  AJOUT : la classe .comment-card pour gérer l'animation
+-->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center mb-5">Ils nous font confiance</h2>
         </div>
-      </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Premier témoignage -->
+            <div class="col">
+                <div class="card h-100 text-center p-3 comment-card">
+                    <img src="../public/asset/img/voiture1.jpeg"
+                         class="card-img-top rounded-circle mx-auto mt-3"
+                         alt="Marie Dupont">
+                    <div class="card-body">
+                        <h5 class="card-title">Marie Dupont</h5>
+                        <p class="card-text">Utilisatrice d'EcoRide</p>
+                        <p class="text-muted">"EcoRide a simplifié mes trajets quotidiens tout en réduisant mon empreinte carbone."</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Deuxième témoignage -->
+            <div class="col">
+                <div class="card h-100 text-center p-3 comment-card">
+                    <img src="../public/asset/img/voiture2.jpeg"
+                         class="card-img-top rounded-circle mx-auto mt-3"
+                         alt="Jean Martin">
+                    <div class="card-body">
+                        <h5 class="card-title">Jean Martin</h5>
+                        <p class="card-text">Conducteur EcoRide</p>
+                        <p class="text-muted">"J’ai rencontré des gens formidables et j’économise sur mes trajets au quotidien."</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Troisième témoignage -->
+            <div class="col">
+                <div class="card h-100 text-center p-3 comment-card">
+                    <img src="../public/asset/img/voiture4.jpeg"
+                         class="card-img-top rounded-circle mx-auto mt-3"
+                         alt="Claire Leroy">
+                    <div class="card-body">
+                        <h5 class="card-title">Claire Leroy</h5>
+                        <p class="card-text">Ambassadrice écologique</p>
+                        <p class="text-muted">"Grâce à EcoRide, j’ai réduit mon impact sur l’environnement tout en partageant mes trajets."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
 
-    <!-- Présentation des mesures de sécurité -->
-    <div class="col-md-6">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <h3 class="card-title">Sécurité</h3>
-          <ul class="list-unstyled">
-            <li>
-              <strong>Authentification sécurisée :</strong>
-              <p class="mb-2">
-                Chaque utilisateur doit créer un compte et valider son identité via des méthodes de vérification
-                (adresse e-mail, numéro de téléphone, etc.). Cela permet de limiter les faux profils et
-                d’établir un climat de confiance.
-              </p>
-            </li>
-            <li>
-              <strong>Protection des données :</strong>
-              <p class="mb-2">
-                Toutes les informations personnelles (nom, coordonnées, données de paiement) sont stockées
-                et transmises de manière chiffrée. Les normes de protection des données (RGPD, etc.)
-                sont respectées pour garantir la confidentialité.
-              </p>
-            </li>
-            <li>
-              <strong>Évaluation et commentaires :</strong>
-              <p class="mb-2">
-                Après chaque trajet, les passagers et les conducteurs peuvent s’évaluer mutuellement.
-                Ce système d’évaluation renforce la transparence et la confiance entre les membres de la communauté.
-              </p>
-            </li>
-            <li>
-              <strong>Support client réactif :</strong>
-              <p class="mb-0">
-                En cas de problème ou de question, un service d’assistance est disponible (téléphone, e-mail, chat)
-                pour répondre rapidement et trouver des solutions. Cette réactivité rassure les utilisateurs
-                et témoigne du sérieux de la plateforme.
-              </p>
-            </li>
-          </ul>
+<!-- ================================================= -->
+<!-- Section Engagement / Valeurs -->
+<!-- ================================================= -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Image illustrative -->
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="../public/asset/img/voiture3.jpeg"
+                     class="img-fluid rounded"
+                     alt="Ville éco-responsable">
+            </div>
+            <!-- Texte et statistiques -->
+            <div class="col-md-6">
+                <h2 class="mb-3">Notre engagement pour un avenir plus vert</h2>
+                <p>
+                    EcoRide favorise le covoiturage écologique pour réduire l’empreinte carbone de chaque trajet.
+                    Rejoignez la communauté pour promouvoir une mobilité responsable et respectueuse de l’environnement.
+                </p>
+                <div class="row text-center mt-4">
+                    <div class="col-3">
+                        <h4 class="fw-bold">2025</h4>
+                        <p class="small text-muted">Année de création</p>
+                    </div>
+                    <div class="col-3">
+                        <h4 class="fw-bold">10,000+</h4>
+                        <p class="small text-muted">Voyages partagés</p>
+                    </div>
+                    <div class="col-3">
+                        <h4 class="fw-bold">5,000+</h4>
+                        <p class="small text-muted">Membres</p>
+                    </div>
+                    <div class="col-3">
+                        <h4 class="fw-bold">15+</h4>
+                        <p class="small text-muted">Partenariats écologiques</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-success mt-4">En savoir plus sur EcoRide</a>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</section>
+
+<!-- ================================================= -->
+<!-- Section Vision pour l’avenir -->
+<!-- ================================================= -->
+<!-- SECTION VISION POUR L'AVENIR -->
+<section class="py-5 vision-section text-white">
+    <div class="container">
+        <!-- Ligne du titre et du paragraphe -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <h2 class="mb-3">Notre vision pour l’avenir</h2>
+            </div>
+            <div class="col-md-6">
+                <p>
+                    EcoRide s’engage à transformer les déplacements en France grâce au covoiturage écologique.
+                </p>
+            </div>
+        </div>
+
+        <!-- Ligne contenant les 3 blocs (Lancement, Croissance, Impact) -->
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Bloc Lancement -->
+            <div class="col bloc">
+                <div class="p-4">
+                    <h4 class="mb-3">Lancement</h4>
+                    <ul>
+                        <li class="bloc-vision">Plateforme en ligne opérationnelle</li>
+                        <li class="bloc-vision">Campagnes de sensibilisation écologiques</li>
+                        <li class="bloc-vision">Collaboration avec des partenaires locaux</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Bloc Croissance -->
+            <div class="col bloc">
+                <div class="p-4 ">
+                    <h4 class="mb-3">Croissance</h4>
+                    <ul>
+                        <li class="bloc-vision">Extension à d’autres régions françaises</li>
+                        <li class="bloc-vision">Augmentation des membres actifs</li>
+                        <li class="bloc-vision">Développement d’applications mobiles</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Bloc Impact -->
+            <div class="col bloc">
+                <div class="p-4 ">
+                    <h4 class="mb-3">Impact</h4>
+                    <ul>
+                        <li class="bloc-vision">Réduction significative des émissions de carbone</li>
+                        <li class="bloc-vision">Sensibilisation accrue à l’écologie</li>
+                        <li class="bloc-vision">Partenariats publics et privés</li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- /.row -->
+    </div><!-- /.container -->
 </section>
 
 
-<!-- Pied de page -->
-<footer class="bg-light text-center py-3">
-  <p>&copy; 2025 EcoRide. Tous droits réservés.</p>
-  <!-- Ajout de l'e-mail de l’entreprise -->
-  <p>Contact : <a href="mailto:contact@ecoride.com">contact@ecoride.com</a></p>
-  <!-- Lien vers les mentions légales -->
-  <p><a href="mentions-legales.html">Mentions légales</a></p>
+<!-- ================================================= -->
+<!-- Section Avantages -->
+<!-- ================================================= -->
+<section class="py-5 text-white section-dark-green" >
+    <div class="container">
+        <div class="row">
+            <!-- Colonne de gauche : titre, texte, bouton -->
+            <div class="col-md-6 d-flex flex-column justify-content-center mb-4 mb-md-0">
+                <h2 class="mb-3">Les avantages du covoiturage avec EcoRide</h2>
+                <p class="mb-4">
+                    Découvrez pourquoi EcoRide est la solution idéale pour vos déplacements écologiques.
+                </p>
+                <a href="#" class="btn btn-light btn-lg btn-outline-success">En savoir plus</a>
+            </div>
+
+            <!-- Colonne de droite : cartes (2x2) -->
+            <div class="col-md-6">
+                <div class="row">
+                    <!-- Avantage 1 -->
+                    <div class="col-sm-6 mb-4">
+                        <div class="card h-100 bg-transparent border-0">
+                            <div class="card-body text-white">
+
+                                <h5 class="card-title"> <i class="fa-solid fa-leaf"></i> Réduction des émissions de carbone</h5>
+                                <p class="card-text">
+                                    Voyagez ensemble pour réduire votre impact environnemental.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Avantage 2 -->
+                    <div class="col-sm-6 mb-4">
+                        <div class="card h-100 bg-transparent border-0">
+                            <div class="card-body text-white">
+                                <h5 class="card-title"><i class="fa-solid fa-piggy-bank"></i> Économies financières</h5>
+                                <p class="card-text">
+                                    Partagez les coûts de vos trajets pour économiser de l'argent.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Avantage 3 -->
+                    <div class="col-sm-6 mb-4">
+                        <div class="card h-100 bg-transparent border-0">
+                            <div class="card-body text-white">
+                                <h5 class="card-title"><i class="fa-solid fa-comment"></i> Rencontres enrichissantes</h5>
+                                <p class="card-text">
+                                    Faites des connexions et partagez des moments avec des personnes aux intérêts variés.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Avantage 4 -->
+                    <div class="col-sm-6 mb-4">
+                        <div class="card h-100 bg-transparent border-0">
+                            <div class="card-body text-white">
+                                <h5 class="card-title"><i class="fa-solid fa-thumbs-up"></i> Facilité d'utilisation</h5>
+                                <p class="card-text">
+                                    Notre plateforme intuitive vous aide à gérer vos trajets en toute simplicité.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.col-md-6 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+
+<!-- ================================================= -->
+<!-- Section Témoignages supplémentaires -->
+<!-- ================================================= -->
+<!--
+  AJOUT : la classe .comment-card pour gérer l'animation
+-->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Ils parlent de nous</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100 text-center p-3 comment-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Laura Moreno</h5>
+                        <p class="card-text">Utilisatrice assidue</p>
+                        <p class="text-muted">"EcoRide me permet de voyager de manière responsable tout en économisant sur mes trajets."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center p-3 comment-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Sophie Bernard</h5>
+                        <p class="card-text">Conductrice régulière</p>
+                        <p class="text-muted">"Grâce à EcoRide, j’ai rencontré des personnes formidables et partagé des trajets mémorables."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center p-3 comment-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Paul Lafont</h5>
+                        <p class="card-text">Ambassadeur écologique</p>
+                        <p class="text-muted">"Une initiative inrouable pour un avenir plus vert. J’ai déjà converti plusieurs amis !"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================= -->
+<!-- Section Appel à l'action finale (CTA) -->
+<!-- ================================================= -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h2 class="mb-3">Rejoignez notre communauté EcoRide</h2>
+        <p class="mb-4">
+            Inscrivez-vous dès aujourd’hui pour commencer à voyager de manière écologique et responsable.
+        </p>
+        <a href="#" class="btn btn-success btn-lg me-3">Inscrivez-vous maintenant !</a>
+        <a href="#" class="btn btn-outline-success btn-lg">Découvrir EcoRide</a>
+    </div>
+</section>
+
+<!-- ================================================= -->
+<!-- Pied de page (Footer) -->
+<!-- ================================================= -->
+<footer class="py-4 bg-dark text-white">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <!-- Liens de navigation rapide dans le footer -->
+        <div class="mb-3 mb-md-0">
+            <a href="#" class="text-white text-decoration-none me-3">Accueil</a>
+            <a href="#" class="text-white text-decoration-none me-3">Nos Services</a>
+            <a href="#" class="text-white text-decoration-none me-3">Blog</a>
+            <a href="#" class="text-white text-decoration-none">Nous Rejoindre</a>
+        </div>
+        <!-- Copyright -->
+        <div class="text-center">
+            © 2025 EcoRide - Voyager autrement. Tous droits réservés.
+        </div>
+    </div>
 </footer>
 
-<!-- Importation des scripts JavaScript nécessaires pour Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- ================================================= -->
+<!-- Inclusion des scripts Bootstrap et personnalisés -->
+<!-- ================================================= -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<script src="../public/asset/js/main.js"></script>
 </body>
 </html>
