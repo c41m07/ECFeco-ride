@@ -3,20 +3,49 @@
 <head>
     <!-- Encodage des caractères -->
     <meta charset="UTF-8">
+
+    <!-- Compatibilité avec Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <!-- Rendre la page responsive sur mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Description pour le SEO -->
     <meta name="description" content="EcoRide est votre partenaire pour des déplacements écologiques, économiques et responsables. Rejoignez une communauté qui partage vos valeurs.">
 
+    <!-- Mots-clés pour le SEO (optionnel : certains moteurs de recherche ne s'en servent plus) -->
+    <meta name="keywords" content="EcoRide, déplacements écologiques, mobilité durable, voyage responsable">
+
+    <!-- Meta Robots pour indiquer aux moteurs de recherche comment indexer la page -->
+    <meta name="robots" content="index,follow">
+
+    <!-- Couleur du thème pour certains navigateurs mobiles -->
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph pour le partage sur les réseaux sociaux -->
+    <meta property="og:title" content="EcoRide - Voyager autrement">
+    <meta property="og:description" content="EcoRide est votre partenaire pour des déplacements écologiques, économiques et responsables. Rejoignez une communauté qui partage vos valeurs.">
+    <!-- lien vers le logo -->
+    <meta property="og:image" content="../public/asset/img/logo.png">
+    <!-- URL du site -->
+    <meta property="og:url" content="http://127.0.0.1/public/public.html">
+
+    <!-- Favicon pour l'onglet du navigateur -->
+    <link rel="icon" href="../public/asset/img/logo.png" type="image/x-icon">
+
+    <!-- Titre de la page -->
     <title>EcoRide - Voyager autrement</title>
 
     <!-- Lien vers la librairie Bootstrap (CSS) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous">
+
     <!-- Lien vers la feuille de style personnalisée -->
     <link rel="stylesheet" href="../public/asset/css/styles.css">
-    <!-- Lien vers Font awesome pour les icônes -->
+
+    <!-- Lien vers Font Awesome pour les icônes -->
+    <!-- Vérifier l'URL si nécessaire -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
@@ -28,26 +57,26 @@
         <!-- Logo et nom de la marque -->
         <a class="navbar-brand d-flex align-items-center" href="#">
             <!-- Image du logo (remplacer par ton image) -->
-            <img src="../public/asset/img/logo.png" alt="Logo EcoRide" class="me-2 rounded-circle">
+            <img alt="Logo EcoRide" class="me-2 rounded-circle" src="../public/asset/img/logo.png">
             <span class="fw-bold">EcoRide</span>
         </a>
 
-        <!-- Bouton pour afficher/masquer le menu sur mobile -->
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse"
+        <!-- Bouton pour afficher/masquer le menu sur mobile ( burger menue ) -->
+        <button aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"
+                class="navbar-toggler"
                 data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
+                data-bs-toggle="collapse"
+                type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <!-- Menu de navigation -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse justify-content-between text-center" id="navbarSupportedContent">
             <!-- Liens centrés -->
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                    <a aria-current="page" class="nav-link active" href="#">Accueil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">À propos</a>
@@ -56,9 +85,8 @@
                     <a class="nav-link" href="#">Blog</a>
                 </li>
             </ul>
-            <!
             <!-- Bouton "Connexion" vert arrondi -->
-            <a href="#" class="btn btn-success btn-contact">Connexion</a>
+            <a class="btn btn-success btn-contact" href="#">Connexion</a>
         </div>
     </div>
 </nav>
@@ -76,11 +104,11 @@
                     EcoRide est votre partenaire pour des déplacements écologiques, économiques et responsables.
                     Rejoignez une communauté qui partage vos valeurs.
                 </p>
-                <a href="#" class="btn btn-success btn-lg">Commencer maintenant !</a>
+                <a class="btn btn-success btn-lg" href="#">Commencer maintenant !</a>
             </div>
             <!-- Image d'illustration de la Hero Section -->
             <div class="col-md-6 text-center mt-4 mt-md-0">
-                <img src="../public/asset/img/paysage2.jpg" class="img-fluid rounded" alt="Illustration EcoRide">
+                <img alt="Illustration EcoRide" class="img-fluid rounded" src="../public/asset/img/paysage2.jpg">
             </div>
         </div>
     </div>
@@ -94,46 +122,47 @@
 -->
 <section class="py-5 bg-light">
     <div class="container">
-        <div class="row">
             <h2 class="text-center mb-5">Ils nous font confiance</h2>
-        </div>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <!-- Premier témoignage -->
             <div class="col">
                 <div class="card h-100 text-center p-3 comment-card">
-                    <img src="../public/asset/img/voiture1.jpeg"
+                    <img alt="Marie Dupont"
                          class="card-img-top rounded-circle mx-auto mt-3"
-                         alt="Marie Dupont">
+                         src="../public/asset/img/voiture1.jpeg">
                     <div class="card-body">
                         <h5 class="card-title">Marie Dupont</h5>
                         <p class="card-text">Utilisatrice d'EcoRide</p>
-                        <p class="text-muted">"EcoRide a simplifié mes trajets quotidiens tout en réduisant mon empreinte carbone."</p>
+                        <p class="text-muted">"EcoRide a simplifié mes trajets quotidiens tout en réduisant mon
+                            empreinte carbone."</p>
                     </div>
                 </div>
             </div>
             <!-- Deuxième témoignage -->
             <div class="col">
                 <div class="card h-100 text-center p-3 comment-card">
-                    <img src="../public/asset/img/voiture2.jpeg"
+                    <img alt="Jean Martin"
                          class="card-img-top rounded-circle mx-auto mt-3"
-                         alt="Jean Martin">
+                         src="../public/asset/img/voiture2.jpeg">
                     <div class="card-body">
                         <h5 class="card-title">Jean Martin</h5>
                         <p class="card-text">Conducteur EcoRide</p>
-                        <p class="text-muted">"J’ai rencontré des gens formidables et j’économise sur mes trajets au quotidien."</p>
+                        <p class="text-muted">"J’ai rencontré des gens formidables et j’économise sur mes trajets au
+                            quotidien."</p>
                     </div>
                 </div>
             </div>
             <!-- Troisième témoignage -->
             <div class="col">
                 <div class="card h-100 text-center p-3 comment-card">
-                    <img src="../public/asset/img/voiture4.jpeg"
+                    <img alt="Claire Leroy"
                          class="card-img-top rounded-circle mx-auto mt-3"
-                         alt="Claire Leroy">
+                         src="../public/asset/img/voiture4.jpeg">
                     <div class="card-body">
                         <h5 class="card-title">Claire Leroy</h5>
                         <p class="card-text">Ambassadrice écologique</p>
-                        <p class="text-muted">"Grâce à EcoRide, j’ai réduit mon impact sur l’environnement tout en partageant mes trajets."</p>
+                        <p class="text-muted">"Grâce à EcoRide, j’ai réduit mon impact sur l’environnement tout en
+                            partageant mes trajets."</p>
                     </div>
                 </div>
             </div>
@@ -149,9 +178,9 @@
         <div class="row align-items-center">
             <!-- Image illustrative -->
             <div class="col-md-6 mb-4 mb-md-0">
-                <img src="../public/asset/img/voiture3.jpeg"
+                <img alt="Ville éco-responsable"
                      class="img-fluid rounded"
-                     alt="Ville éco-responsable">
+                     src="../public/asset/img/voiture3.jpeg">
             </div>
             <!-- Texte et statistiques -->
             <div class="col-md-6">
@@ -178,7 +207,7 @@
                         <p class="small text-muted">Partenariats écologiques</p>
                     </div>
                 </div>
-                <a href="#" class="btn btn-success mt-4">En savoir plus sur EcoRide</a>
+                <a class="btn btn-success mt-4" href="#">En savoir plus sur EcoRide</a>
             </div>
         </div>
     </div>
@@ -245,7 +274,7 @@
 <!-- ================================================= -->
 <!-- Section Avantages -->
 <!-- ================================================= -->
-<section class="py-5 text-white section-dark-green" >
+<section class="py-5 text-white section-dark-green">
     <div class="container">
         <div class="row">
             <!-- Colonne de gauche : titre, texte, bouton -->
@@ -254,7 +283,7 @@
                 <p class="mb-4">
                     Découvrez pourquoi EcoRide est la solution idéale pour vos déplacements écologiques.
                 </p>
-                <a href="#" class="btn btn-light btn-lg btn-outline-success">En savoir plus</a>
+                <a class="btn btn-light btn-lg btn-outline-success" href="#">En savoir plus</a>
             </div>
 
             <!-- Colonne de droite : cartes (2x2) -->
@@ -265,7 +294,8 @@
                         <div class="card h-100 bg-transparent border-0">
                             <div class="card-body text-white">
 
-                                <h5 class="card-title"> <i class="fa-solid fa-leaf"></i> Réduction des émissions de carbone</h5>
+                                <h5 class="card-title"><i class="fa-solid fa-leaf"></i> Réduction des émissions de
+                                    carbone</h5>
                                 <p class="card-text">
                                     Voyagez ensemble pour réduire votre impact environnemental.
                                 </p>
@@ -287,9 +317,11 @@
                     <div class="col-sm-6 mb-4">
                         <div class="card h-100 bg-transparent border-0">
                             <div class="card-body text-white">
-                                <h5 class="card-title"><i class="fa-solid fa-comment"></i> Rencontres enrichissantes</h5>
+                                <h5 class="card-title"><i class="fa-solid fa-comment"></i> Rencontres enrichissantes
+                                </h5>
                                 <p class="card-text">
-                                    Faites des connexions et partagez des moments avec des personnes aux intérêts variés.
+                                    Faites des connexions et partagez des moments avec des personnes aux intérêts
+                                    variés.
                                 </p>
                             </div>
                         </div>
@@ -326,7 +358,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Laura Moreno</h5>
                         <p class="card-text">Utilisatrice assidue</p>
-                        <p class="text-muted">"EcoRide me permet de voyager de manière responsable tout en économisant sur mes trajets."</p>
+                        <p class="text-muted">"EcoRide me permet de voyager de manière responsable tout en économisant
+                            sur mes trajets."</p>
                     </div>
                 </div>
             </div>
@@ -335,7 +368,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Sophie Bernard</h5>
                         <p class="card-text">Conductrice régulière</p>
-                        <p class="text-muted">"Grâce à EcoRide, j’ai rencontré des personnes formidables et partagé des trajets mémorables."</p>
+                        <p class="text-muted">"Grâce à EcoRide, j’ai rencontré des personnes formidables et partagé des
+                            trajets mémorables."</p>
                     </div>
                 </div>
             </div>
@@ -344,7 +378,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Paul Lafont</h5>
                         <p class="card-text">Ambassadeur écologique</p>
-                        <p class="text-muted">"Une initiative inrouable pour un avenir plus vert. J’ai déjà converti plusieurs amis !"</p>
+                        <p class="text-muted">"Une initiative inrouable pour un avenir plus vert. J’ai déjà converti
+                            plusieurs amis !"</p>
                     </div>
                 </div>
             </div>
@@ -361,8 +396,8 @@
         <p class="mb-4">
             Inscrivez-vous dès aujourd’hui pour commencer à voyager de manière écologique et responsable.
         </p>
-        <a href="#" class="btn btn-success btn-lg me-3">Inscrivez-vous maintenant !</a>
-        <a href="#" class="btn btn-outline-success btn-lg">Découvrir EcoRide</a>
+        <a class="btn btn-success btn-lg me-3" href="#">Inscrivez-vous maintenant !</a>
+        <a class="btn btn-outline-success btn-lg" href="#">Découvrir EcoRide</a>
     </div>
 </section>
 
@@ -373,10 +408,10 @@
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
         <!-- Liens de navigation rapide dans le footer -->
         <div class="mb-3 mb-md-0">
-            <a href="#" class="text-white text-decoration-none me-3">Accueil</a>
-            <a href="#" class="text-white text-decoration-none me-3">Nos Services</a>
-            <a href="#" class="text-white text-decoration-none me-3">Blog</a>
-            <a href="#" class="text-white text-decoration-none">Nous Rejoindre</a>
+            <a class="text-white text-decoration-none me-3" href="#">Accueil</a>
+            <a class="text-white text-decoration-none me-3" href="#">Nos Services</a>
+            <a class="text-white text-decoration-none me-3" href="#">Blog</a>
+            <a class="text-white text-decoration-none" href="#">Nous Rejoindre</a>
         </div>
         <!-- Copyright -->
         <div class="text-center">
@@ -388,15 +423,15 @@
 <!-- ================================================= -->
 <!-- Inclusion des scripts Bootstrap et personnalisés -->
 <!-- ================================================= -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<script crossorigin="anonymous"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
 
 <script src="../public/asset/js/main.js"></script>
 </body>

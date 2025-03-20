@@ -17,3 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 200 * index);
     });
 });
+
+//click sur le menu burger navbar-toggler suprime la class collapse de la div navbar-collapse
+document.querySelector(".navbar-toggler").addEventListener("click", () => {
+    document.querySelector(".navbar-collapse").classList.toggle("collapse");
+});
+
