@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Encodage des caractères -->
+    <meta charset="UTF-8">
+
+    <!-- Compatibilité avec Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Rendre la page responsive sur mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Description pour le SEO -->
+    <meta name="description" content="EcoRide est votre partenaire pour des déplacements écologiques, économiques et responsables. Rejoignez une communauté qui partage vos valeurs.">
+
+    <!-- Mots-clés pour le SEO (optionnel : certains moteurs de recherche ne s'en servent plus) -->
+    <meta name="keywords" content="EcoRide, déplacements écologiques, mobilité durable, voyage responsable">
+
+    <!-- Meta Robots pour indiquer aux moteurs de recherche comment indexer la page -->
+    <meta name="robots" content="index,follow">
+
+    <!-- Couleur du thème pour certains navigateurs mobiles -->
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph pour le partage sur les réseaux sociaux -->
+    <meta property="og:title" content="EcoRide - Voyager autrement">
+    <meta property="og:description" content="EcoRide est votre partenaire pour des déplacements écologiques, économiques et responsables. Rejoignez une communauté qui partage vos valeurs.">
+    <!-- lien vers le logo -->
+    <meta property="og:image" content="../../public/asset/img/logo.png">
+    <!-- URL du site -->
+    <meta property="og:url" content="http://127.0.0.1:80/public/index.html">
+
+    <!-- Favicon pour l'onglet du navigateur -->
+    <link rel="icon" href="../../public/asset/img/logo.png" type="image/x-icon">
+
+    <!-- Titre de la page -->
+    <title>EcoRide - Voyager autrement</title>
+
+    <!-- Lien vers la police de caracteres Open Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lien vers la librairie Bootstrap (CSS) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Lien vers la feuille de style personnalisée -->
+    <link rel="stylesheet" href="../../public/asset/css/styles.css">
+
+    <!-- Lien vers Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- ================================================= -->
+<!-- Barre de navigation (Header) -->
+<!-- ================================================= -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container border border-2 rounded-5 ">
+        <!-- Logo et nom de la marque -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <!-- Image du logo -->
+            <img alt="Logo EcoRide" class="me-2 rounded-circle" src="../../public/asset/img/logo.png">
+            <span class="fw-bold">EcoRide</span>
+        </a>
+
+        <!-- Bouton pour afficher/masquer le menu sur mobile ( burger menu ) -->
+        <button type="button"
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu de navigation -->
+        <div class="collapse navbar-collapse justify-content-between text-center pb-1 pt-1" id="navbarSupportedContent">
+            <!-- Liens centrés -->
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a aria-current="page" class="nav-link active" href="../../public/index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../public/templates/covoiturage.html">Covoiturage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+            <!-- Bouton "Connexion" vert arrondi -->
+            <a class="btn btn-success btn-login" href="#">Connexion</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ================================================= -->
+<!-- Section barre de recherche: formulaire arrivée, départ, date )-->
+<!-- ================================================= -->
+<section class="pt-5 pb-0">
+    <div class="container mt-3 ">
+        <div class="row justify-content-center ">
+            <div class="col-md-12">
+                <form class="bg-white p-4 rounded shadow-sm">
+                    <div class="row">
+                        <!-- Champ de recherche "Départ" -->
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <label for="departure" class="form-label">Départ</label>
+                            <input type="text" class="form-control" id="departure" placeholder="Ville de départ">
+                        </div>
+                        <!-- Champ de recherche "Arrivée" -->
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <label for="arrival" class="form-label">Arrivée</label>
+                            <input type="text" class="form-control" id="arrival" placeholder="Ville d'arrivée">
+                        </div>
+                        <!-- Champ de recherche "Date" -->
+                        <div class="col-md-2 mb-3 mb-md-0">
+                            <label for="date" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="date">
+                        </div>
+                        <!-- Bouton de recherche -->
+                        <div class="col-md-2 d-flex align-items-end">
+                            <button type="submit" class="btn btn-success w-100">Rechercher</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================= -->
+<!-- Section filtres de recherche des résultats -->
+<!-- ================================================= -->
+<section class="bg-light py-5  pt-0 pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form class="bg-white p-4 rounded shadow-sm">
+                    <div class="row">
+                        <!-- Filtre "Prix maximum" -->
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <label for="price" class="form-label">Prix max</label>
+                            <input type="number" class="form-control" id="price" placeholder="€">
+                        </div>
+                        <!-- Filtre "Durée maximum" -->
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <label for="duration" class="form-label">Durée max</label>
+                            <input type="number" class="form-control" id="duration" placeholder="h">
+                        </div>
+                        <!-- Filtre "Note minimum" -->
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <label for="rating" class="form-label">Note min</label>
+                            <input type="number" class="form-control" id="rating" placeholder="0-5">
+                        </div>
+                        <!-- Filtre "Aspect écologique" -->
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <label for="ecological" class="form-label">Ecologique</label>
+                            <select class="form-select" id="ecological">
+                                <option value="0">Peu importe</option>
+                                <option value="1">Electrique</option>
+                                <option value="2">Non électrique</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="row pt-1">
+                        <!-- Bouton de recherche -->
+                        <div class="col-md-12 d-flex align-items-end">
+                            <button type="submit" class="btn btn-success w-100">Filtrer</button>
+                        </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================= -->
+<!-- Section résultat recherche avec pseudo, photo profil,note du chauffeur, places restantes, prix, date/heure de départ et arrvié, mention écologiique si éléctrique, bouton détail, bouton réserver  -->
+<!-- ================================================= -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Résultat 1 -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <!-- Photo de profil -->
+                            <img class="rounded-circle me-3" src="../../public/asset/img/404.webp" alt="Photo de profil">
+                            <!-- Pseudo du conducteur -->
+                            <h5 class="card-title mb-0">Jean Dupont</h5>
+                        </div>
+                        <!-- Note du conducteur -->
+                        <div class="d-flex align-items-center mt-2">
+                                 Note: 4.5/5
+                        </div>
+                        <!-- Places restantes -->
+                        <div class="d-flex align-items-center mt-2">
+                            <i class="fas fa-user-friends me-2"></i> 2 places restantes
+                        </div>
+                        <!-- Prix -->
+                        <div class="d-flex align-items-center mt-2">
+                            <i class="fas fa-euro-sign me-2"></i> 10€
+                        </div>
+                        <!-- Date et heure de départ -->
+                        <div class="d-flex align-items-center mt-2">
+                            <i class="fas fa-calendar-alt me-2"></i> Départ a :12/12/2025 à 14h00
+                        </div>
+                        <!-- Date et heure d'arrivée -->
+                        <div class="d-flex align-items-center mt-2">
+                            <i class="fas fa-calendar-alt me-2"></i> 12/12/2025 à 16h00
+                        </div>
+                        <!-- durée du trajet -->
+                        <div class="d-flex align-items-center mt-2">
+                            <i class="fas fa-clock me-2"></i> 2h
+                        </div>
+                        <!-- Mention écologique -->
+                        <div class="d-flex align-items-center mt-2 ">
+                            <i class="fas fa-gas-pump me-2"></i> Véhicule non électrique
+                        </div>
+                        <!-- Bouton "Détails" -->
+                        <a href="#" class="btn btn-success mt-3">Détails</a>
+                        <!-- Bouton "Réserver" -->
+                        <a href="#" class="btn btn-primary mt-3">Réserver</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Résultat 2 -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <!-- Photo de profil -->
+                            <img class="rounded-circle me-3" src="../../public/asset/img/404.webp" alt="Photo de profil">
+                            <!-- Pseudo du conducteur -->
+                            <h5 class="card-title
+                            mb-0">Marie Martin</h5>
+                        </div>
+                        <!-- Note du conducteur -->
+                        <div class="d-flex align-items-center mt-2">
+                             Note: 4.8/5
+                        </div>
+                        <!-- Places restantes -->
+                        <div class="d-flex align-items-center mt-2">
+                            <i class="fas fa-user-friends me-2"></i> 1 place restante
+                        </div>
+                        <!-- Prix -->
+                        <div class="d-flex align-items-center mt-2">
+                            <i class="fas fa-euro-sign me-2"></i> 15€
+                        </div>
+                        <!-- Date et heure de départ -->
+                        <div class="d-flex align-items-center mt-2">
+                            <i class="fas fa-calendar-alt me-2"></i> Départ a :12/12/2025 à 15h00
+                        </div>
+                        <!-- Date et heure d'arrivée -->
+                        <div class="d-flex align-items-center mt-2">
+                            <i class="fas fa-calendar-alt me-2"></i> 12/12/2025 à 17h00
+                        </div>
+                        <!-- durée du trajet -->
+                        <div class="d-flex align-items-center mt-2">
+                            <i class="fas fa-clock me-2"></i> 2h
+                        </div>
+                        <!-- Mention écologique -->
+                        <div class="d-flex align-items-center mt-2">
+                            <i class="fas fa-leaf me-2"></i> Véhicule électrique
+                        </div>
+                        <!-- Bouton "Détails" -->
+                        <a href="#" class="btn btn-success mt-3">Détails</a>
+                        <!-- Bouton "Réserver" -->
+                        <a href="#" class="btn btn-primary mt-3">Réserver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================= -->
+<!-- Pied de page (Footer) -->
+<!-- ================================================= -->
+<footer class="py-4 text-bg-dark">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div class="mb-3 mb-md-0">
+            <a class="text-white text-decoration-none me-3" href="#">Accueil</a>
+            <a class="text-white text-decoration-none me-3" href="#">Nos Services</a>
+            <a class="text-white text-decoration-none me-3" href="#">Nous contacter</a>
+            <a class="text-white text-decoration-none" href="#">Nous Rejoindre</a>
+        </div>
+        <!-- Copyright -->
+        <div class="text-center">
+            © 2025 EcoRide - Voyager autrement. Tous droits réservés.
+        </div>
+    </div>
+</footer>
+
+<!-- ================================================= -->
+<!-- Inclusion des scripts Bootstrap et personnalisés -->
+<!-- ================================================= -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../public/asset/js/main.js"></script>
+</body>
+</html>
