@@ -1,0 +1,416 @@
+/*
+  =============================
+  VARIABLES ET RÉGLAGES GÉNÉRAUX
+  =============================
+*/
+
+:root {
+    /* Couleurs principales */
+    --color-primary: rgb(20, 116, 33); /* Vert principal */
+    --color-darkgreen: rgb(8, 96, 23); /* Vert plus foncé pour les sections */
+    --color-button: rgb(76, 175, 80); /* Vert pour les boutons */
+    --color-lightgreen: rgb(235, 255, 244); /* Vert très clair pour les fonds */
+    --color-black: rgb(0, 0, 0); /* Noir */
+    --color-white: rgb(255, 255, 255); /* Blanc */
+    --color-text: rgb(51, 51, 51); /* Couleur de texte principale */
+    --color-grey: rgb(248, 249, 250); /* Gris clair (ex : background navbar) */
+
+    /* Dimensions */
+    --hero-title-size: 3rem; /* Taille du titre principal dans la hero */
+    --hero-subtitle-size: 1.1rem; /* Taille du sous-titre/texte d’intro */
+    --section-title-size: 2rem; /* Taille des titres de section */
+    --card-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Ombre légère pour les cartes */
+}
+
+/* Réinitialisation basique et styles globaux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-white);
+}
+
+/* Liens sans soulignement par défaut */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Titres, paragraphes, etc. */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+/*
+  =============================
+  BARRE DE NAVIGATION (Header)
+  =============================
+*/
+
+/* Barre de navigation blanche */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+.navbar .border {
+    border-color: var(--color-button) !important;
+}
+
+/* Logo et texte  */
+.navbar-brand {
+    font-weight: 700;
+    color: var(--color-darkgreen) !important;
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}
+
+/* Liens du menu */
+.navbar-nav .nav-link {
+    color: var(--color-text) !important;
+    margin: 0 0.5rem;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.navbar-toggler {
+    border: none;
+    padding-right: 5%;
+}
+
+/* Bouton "Connexion" */
+.btn-login {
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+}
+
+/*
+  =============================
+  SECTION HERO (Bannière principale)
+  =============================
+*/
+
+.hero-section {
+    background-color: var(--color-white);
+    padding: 3rem 0;
+}
+
+.hero-section h1 {
+    font-size: var(--hero-title-size);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-section p {
+    font-size: var(--hero-subtitle-size);
+    color: rgb(102, 102, 102);
+    margin-bottom: 2rem;
+}
+
+.hero-section .btn.btn-success {
+    background-color: var(--color-primary) !important;
+    border: none;
+    font-size: 1.125rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+}
+
+.hero-section .btn.btn-success:hover {
+    background-color: rgb(33, 136, 56) !important;
+}
+
+.hero-section img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+}
+
+.hero-section .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+}
+
+/*
+  =============================
+  SECTION TÉMOIGNAGES
+  =============================
+*/
+
+/* Section fond gris clair */
+.bg-light {
+    background-color: var(--color-lightgreen) !important;
+    padding: 3rem 0;
+}
+
+.bg-light h2 {
+    font-size: var(--section-title-size);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Cartes de témoignage */
+.card {
+    border: none;
+    box-shadow: var(--card-shadow);
+    border-radius: 8px;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.card .card-title {
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.card .card-text {
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.card .text-muted {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: rgb(119, 119, 119);
+}
+
+/*
+  =============================
+  SECTION ENGAGEMENT / VALEURS
+  =============================
+*/
+
+section img {
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: var(--card-shadow);
+}
+
+section h2 {
+    font-size: var(--section-title-size);
+    margin-bottom: 1rem;
+}
+
+.row.text-center h4 {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.btn.btn-success.mt-4 {
+    background-color: var(--color-primary) !important;
+    border: none;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+}
+
+.btn.btn-success.mt-4:hover {
+    background-color: rgb(33, 136, 56) !important;
+}
+
+/*
+  =============================
+  SECTION VISION POUR L'AVENIR
+  =============================
+*/
+
+.vision-section {
+    background-color: var(--color-darkgreen);
+}
+
+.vision-section,
+.vision-section p,
+.vision-section h2,
+.vision-section h4,
+.vision-section li {
+    color: var(--color-white); /* Texte en blanc */
+}
+
+.bloc-vision {
+    background-color: rgba(255, 255, 255, 0.05); /* Léger voile blanc */
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.vision-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.vision-section li {
+    position: relative;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+.vision-section li::before {
+    content: "✔";
+    position: absolute;
+    left: 5px;
+    color: var(--color-white);
+}
+
+.bloc {
+    border: 1px solid var(--color-button);
+    border-radius: 15px;
+}
+
+/*
+  =============================
+  SECTION AVANTAGES
+  =============================
+*/
+
+.section-dark-green {
+    background-color: var(--color-darkgreen) !important;
+    color: var(--color-white) !important;
+    padding: 4rem 0;
+}
+
+.section-dark-green h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: var(--section-title-size);
+}
+
+/*
+  =============================
+  SECTION APPEL À L’ACTION FINALE (CTA)
+  =============================
+*/
+
+.section-cta {
+    background-color: var(--color-grey);
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.section-cta h2 {
+    font-size: var(--section-title-size);
+    margin-bottom: 1rem;
+}
+
+.section-cta p {
+    margin-bottom: 2rem;
+    color: rgb(85, 85, 85);
+}
+
+.section-cta .btn-success.btn-lg {
+    background-color: var(--color-primary) !important;
+    border: none;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+.section-cta .btn-success.btn-lg:hover {
+    background-color: var(--color-button) !important;
+}
+
+.section-cta .btn-outline-success.btn-lg {
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary) !important;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+}
+
+.section-cta .btn-outline-success.btn-lg:hover {
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+}
+
+/*
+  =============================
+  PIED DE PAGE (FOOTER)
+  =============================
+*/
+
+footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 2rem 0;
+    font-size: 0.9rem;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+
+@media (min-width: 768px) {
+    footer .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+footer a {
+    color: var(--color-white);
+    margin-right: 1rem;
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: var(--color-primary);
+}
+
+footer div.text-center {
+    text-align: center;
+}
+
+/*
+  =============================
+  NOUVELLES CLASSES D’ANIMATION
+  =============================
+*/
+
+.comment-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.comment-card.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
