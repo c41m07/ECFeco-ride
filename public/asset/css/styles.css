@@ -6,20 +6,20 @@
 
 :root {
     /* Couleurs principales */
-    --color-primary: #147421;       /* Vert principal */
-    --color-darkgreen: #086017;     /* Vert plus foncé pour les sections */
-    --color-button: #4CAF50; /* Vert pour les boutons */
-    --color-lightgreen: #EBFFF4;    /* Vert très clair pour les fonds */
-    --color-black: #000000;         /* Noir */
-    --color-white: #ffffff;         /* Blanc */
-    --color-text: #333333;          /* Couleur de texte principale */
-    --color-grey: #f8f9fa;          /* Gris clair (ex : background navbar) */
+    --color-primary: rgb(20, 116, 33); /* Vert principal */
+    --color-darkgreen: rgb(8, 96, 23); /* Vert plus foncé pour les sections */
+    --color-button: rgb(76, 175, 80); /* Vert pour les boutons */
+    --color-lightgreen: rgb(235, 255, 244); /* Vert très clair pour les fonds */
+    --color-black: rgb(0, 0, 0); /* Noir */
+    --color-white: rgb(255, 255, 255); /* Blanc */
+    --color-text: rgb(51, 51, 51); /* Couleur de texte principale */
+    --color-grey: rgb(248, 249, 250); /* Gris clair (ex : background navbar) */
 
     /* Dimensions */
-    --hero-title-size: 3rem;          /* Taille du titre principal dans la hero */
-    --hero-subtitle-size: 1.125rem;   /* Taille du sous-titre/texte d’intro */
-    --section-title-size: 2rem;       /* Taille des titres de section */
-    --card-shadow: 0 2px 6px rgba(0,0,0,0.08); /* Ombre légère pour les cartes */
+    --hero-title-size: 3rem; /* Taille du titre principal dans la hero */
+    --hero-subtitle-size: 1.1rem; /* Taille du sous-titre/texte d’intro */
+    --section-title-size: 2rem; /* Taille des titres de section */
+    --card-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Ombre légère pour les cartes */
 }
 
 /* Réinitialisation basique et styles globaux */
@@ -30,10 +30,9 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: var(--color-text);
     background-color: var(--color-white);
-
 }
 
 /* Liens sans soulignement par défaut */
@@ -41,6 +40,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
 a:hover {
     text-decoration: none;
 }
@@ -52,11 +52,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /*
   =============================
-  BARRE DE NAVIGATION
+  BARRE DE NAVIGATION (Header)
   =============================
 */
 
-/* Barre de navigation blanche avec ombre subtile */
+/* Barre de navigation blanche */
 .navbar {
     background-color: rgba(255, 255, 255, 0.9) !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -65,8 +65,11 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     z-index: 999;
 }
+.navbar .border {
+    border-color: var(--color-button) !important;
+}
 
-/* Logo et texte de la marque */
+/* Logo et texte  */
 .navbar-brand {
     font-weight: 700;
     color: var(--color-darkgreen) !important;
@@ -74,10 +77,11 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     margin-left: 0.5rem;
 }
+
 .navbar-brand img {
     height: 40px;
     width: 40px;
-    object-fit: cover;
+    background-size: cover;
     margin-right: 0.5rem;
     border-radius: 50%;
 }
@@ -88,43 +92,46 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 0.5rem;
     font-weight: 500;
 }
+
 .navbar-nav .nav-link:hover {
     color: var(--color-primary) !important;
 }
+
 .navbar-toggler {
     border: none;
     padding-right: 5%;
 }
 
-/* Bouton "Contactez-nous" : on le veut vert et arrondi */
-.btn-contact {
-    border-radius: 50px;       /* Effet "pilule" */
-    padding: 0.5rem 1.5rem;    /* Ajuste la taille du bouton */
+/* Bouton "Connexion" */
+.btn-login {
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
     font-weight: 500;
-    /* Si besoin : background-color: var(--color-primary) !important; */
 }
 
 /*
   =============================
-  SECTION HERO (Bannière)
+  SECTION HERO (Bannière principale)
   =============================
 */
 
 .hero-section {
     background-color: var(--color-white);
     padding: 3rem 0;
-
 }
+
 .hero-section h1 {
     font-size: var(--hero-title-size);
     margin-bottom: 1rem;
     line-height: 1.2;
 }
+
 .hero-section p {
     font-size: var(--hero-subtitle-size);
-    color: #666666;
+    color: rgb(102, 102, 102);
     margin-bottom: 2rem;
 }
+
 .hero-section .btn.btn-success {
     background-color: var(--color-primary) !important;
     border: none;
@@ -132,9 +139,11 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.75rem 1.5rem;
     border-radius: 4px;
 }
+
 .hero-section .btn.btn-success:hover {
-    background-color: #218838 !important;
+    background-color: rgb(33, 136, 56) !important;
 }
+
 .hero-section img {
     max-width: 100%;
     border-radius: 8px;
@@ -152,7 +161,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*
   =============================
-  SECTIONS TÉMOIGNAGES
+  SECTION TÉMOIGNAGES
   =============================
 */
 
@@ -161,6 +170,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--color-lightgreen) !important;
     padding: 3rem 0;
 }
+
 .bg-light h2 {
     font-size: var(--section-title-size);
     margin-bottom: 3rem;
@@ -173,26 +183,30 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--card-shadow);
     border-radius: 8px;
 }
+
 .card img {
     width: 100px;
     height: 100px;
-    object-fit: cover;
+    background-size: cover;
     border-radius: 50%;
     margin-bottom: 1rem;
 }
+
 .card .card-title {
     margin-top: 0.5rem;
     margin-bottom: 0.25rem;
     font-weight: 600;
 }
+
 .card .card-text {
     font-weight: 500;
     color: var(--color-white);
 }
+
 .card .text-muted {
     font-size: 0.9rem;
     font-style: italic;
-    color: #777;
+    color: rgb(119, 119, 119);
 }
 
 /*
@@ -204,19 +218,23 @@ h1, h2, h3, h4, h5, h6 {
 .py-5 {
     padding: 3rem 0 !important;
 }
+
 section img {
     border-radius: 8px;
     width: 100%;
     box-shadow: var(--card-shadow);
 }
+
 section h2 {
     font-size: var(--section-title-size);
     margin-bottom: 1rem;
 }
+
 .row.text-center h4 {
     font-weight: 700;
     font-size: 1.5rem;
 }
+
 .btn.btn-success.mt-4 {
     background-color: var(--color-primary) !important;
     border: none;
@@ -224,13 +242,62 @@ section h2 {
     padding: 0.75rem 1.5rem;
     border-radius: 4px;
 }
+
 .btn.btn-success.mt-4:hover {
-    background-color: #218838 !important;
+    background-color: rgb(33, 136, 56) !important;
 }
 
 /*
   =============================
-  SECTION FOND VERT FONCÉ (Vision)
+  SECTION VISION POUR L'AVENIR
+  =============================
+*/
+
+.vision-section {
+    background-color: var(--color-darkgreen);
+}
+
+.vision-section,
+.vision-section p,
+.vision-section h2,
+.vision-section h4,
+.vision-section li {
+    color: var(--color-white); /* Texte en blanc */
+}
+
+.bloc-vision {
+    background-color: rgba(255, 255, 255, 0.05); /* Léger voile blanc */
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.vision-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.vision-section li {
+    position: relative;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+.vision-section li::before {
+    content: "✔";
+    position: absolute;
+    left: 5px;
+    color: var(--color-white);
+}
+
+.bloc {
+    border: 1px solid var(--color-button);
+    border-radius: 15px;
+}
+
+/*
+  =============================
+  SECTION AVANTAGES
   =============================
 */
 
@@ -239,51 +306,11 @@ section h2 {
     color: var(--color-white) !important;
     padding: 4rem 0;
 }
+
 .section-dark-green h2 {
     text-align: center;
     margin-bottom: 3rem;
     font-size: var(--section-title-size);
-}
-.section-dark-green .p-4 {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-}
-.section-dark-green ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-.section-dark-green li {
-    margin-bottom: 0.5rem;
-    padding-left: 1.5rem;
-    position: relative;
-}
-.section-dark-green li::before {
-    content: '✔';
-    position: absolute;
-    left: 0;
-    color: var(--color-white);
-}
-
-/*
-  =============================
-  SECTION AVANTAGES (Fond vert clair)
-  =============================
-*/
-
-.bg-light-green {
-    background-color: var(--color-lightgreen);
-    padding: 3rem 0;
-}
-.bg-light-green h2 {
-    font-size: var(--section-title-size);
-    margin-bottom: 2rem;
-    text-align: center;
-}
-.bg-light-green .p-4 {
-    background-color: var(--color-white);
-    border-radius: 8px;
-    box-shadow: var(--card-shadow);
-    margin: 1rem;
 }
 
 /*
@@ -297,14 +324,17 @@ section h2 {
     text-align: center;
     padding: 3rem 0;
 }
+
 .section-cta h2 {
     font-size: var(--section-title-size);
     margin-bottom: 1rem;
 }
+
 .section-cta p {
     margin-bottom: 2rem;
-    color: #555;
+    color: rgb(85, 85, 85);
 }
+
 .section-cta .btn-success.btn-lg {
     background-color: var(--color-primary) !important;
     border: none;
@@ -313,9 +343,11 @@ section h2 {
     border-radius: 4px;
     margin-right: 1rem;
 }
+
 .section-cta .btn-success.btn-lg:hover {
-    background-color: #218838 !important;
+    background-color: var(--color-button) !important;
 }
+
 .section-cta .btn-outline-success.btn-lg {
     border-color: var(--color-primary) !important;
     color: var(--color-primary) !important;
@@ -323,19 +355,10 @@ section h2 {
     padding: 0.75rem 1.5rem;
     border-radius: 4px;
 }
+
 .section-cta .btn-outline-success.btn-lg:hover {
     background-color: var(--color-primary) !important;
     color: var(--color-white) !important;
-}
-.section-cta .small-images {
-    margin-top: 2rem;
-}
-.section-cta .small-images img {
-    width: 60px;
-    height: auto;
-    margin: 0 0.5rem;
-    border-radius: 4px;
-    box-shadow: var(--card-shadow);
 }
 
 /*
@@ -350,11 +373,13 @@ footer {
     padding: 2rem 0;
     font-size: 0.9rem;
 }
+
 footer .container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    margin-right: 1rem;
 }
+
 @media (min-width: 768px) {
     footer .container {
         flex-direction: row;
@@ -362,14 +387,17 @@ footer .container {
         align-items: center;
     }
 }
+
 footer a {
     color: var(--color-white);
     margin-right: 1rem;
     font-weight: 500;
 }
+
 footer a:hover {
     color: var(--color-primary);
 }
+
 footer div.text-center {
     text-align: center;
 }
@@ -378,11 +406,6 @@ footer div.text-center {
   =============================
   NOUVELLES CLASSES D’ANIMATION
   =============================
-
-  Les cartes .comment-card sont invisibles
-  (opacité 0 + décalage vertical).
-  Lorsqu'on leur ajoute .fade-in (en JS),
-  elles apparaissent et remontent.
 */
 
 .comment-card {
@@ -395,54 +418,3 @@ footer div.text-center {
     opacity: 1;
     transform: translateY(0);
 }
-.navborder {
-    border: 1px solid var(--color-darkgreen);
-    border-radius: 2rem;
-}
-
-/* SECTION VISION POUR L'AVENIR */
-
-/* Couleur de fond et texte blanc */
-.vision-section {
-    background-color: var(--color-darkgreen);
-}
-.vision-section,
-.vision-section p,
-.vision-section h2,
-.vision-section h4,
-.vision-section li {
-    color: #ffffff; /* Texte en blanc */
-}
-
-/* Blocs internes (Lancement, Croissance, Impact) */
-.bloc-vision {
-    background-color: rgba(255, 255, 255, 0.05); /* Léger voile blanc */
-    border-radius: 8px;
-    padding: 1rem;
-}
-
-/* Listes à puces (sans puce par défaut) */
-.vision-section ul {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 0; /* Évite un grand espace en bas de la liste */
-}
-
-/* Si tu souhaites un petit "check" avant chaque élément */
-.vision-section li {
-    position: relative;
-    margin-bottom: 0.5rem;
-    padding-left: 1.5rem;
-}
-.vision-section li::before {
-    content: "✔";
-    position: absolute;
-    left: 5px;
-    color: #ffffff; /* Même couleur que le texte */
-}
-.bloc {
-    border: 1px solid var(--color-button);
-    border-radius: 15px;
-}
-
-

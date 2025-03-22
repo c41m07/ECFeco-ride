@@ -1,8 +1,7 @@
-/*
-  Script pour déclencher une animation sur les cartes de commentaires
-  au chargement de la page (ou au scroll).
-*/
-
+//consol log pour vérifier que le fichier est bien chargé
+console.log("Main.js loaded")
+//consol log pour vérifier que bootstrap est bien chargé
+console.log("Bootstrap Modal Plugin:", typeof bootstrap.Modal);
 // Fonction simple : au chargement de la page, on ajoute la classe "fade-in"
 // à toutes les cartes avec la classe "comment-card".
 document.addEventListener("DOMContentLoaded", () => {
@@ -18,8 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-//click sur le menu burger navbar-toggler suprime la class collapse de la div navbar-collapse
-document.querySelector(".navbar-toggler").addEventListener("click", () => {
-    document.querySelector(".navbar-collapse").classList.toggle("collapse");
-});
+
+
+
+
+
+
 
