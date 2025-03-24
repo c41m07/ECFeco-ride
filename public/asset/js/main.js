@@ -6,6 +6,29 @@ console.log("Bootstrap Modal Plugin:", typeof bootstrap.Modal);
 
 // Dès que la page est entièrement chargée...
 document.addEventListener("DOMContentLoaded", () => {
+    //import de nav.html dans le header
+    const header = document.querySelector("header");
+    const footer = document.querySelector("footer");
+    fetch("/public/asset/html/nav.html")
+        .then((response) => response.text())
+        .then((data) => {
+            header.innerHTML = data;
+            const loginBtn = header.querySelector(".btn-login");
+            if (loginBtn) {
+                loginBtn.addEventListener("click", () => {
+                    console.log("Bouton de connexion cliqué");
+                    const modalLogin = document.querySelector("#modalLogin");
+                    const modalLog = new bootstrap.Modal(modalLogin);
+                    modalLog.show();
+                });
+            }
+        });
+    fetch("/public/asset/html/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+            footer.innerHTML = data;
+        });
+
     // Je sélectionne toutes les cartes de commentaires avec la classe "comment-card"
     const commentCards = document.querySelectorAll(".comment-card");
 
@@ -17,38 +40,21 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 200 * index);
     });
 
-    // Écouteur pour le bouton "Se connecter"
-    const loginBtn = document.querySelector(".btn-login");
-    if (loginBtn) {
-        loginBtn.addEventListener("click", () => {
-            console.log("Bouton de connexion cliqué");
-            // Ici je pourrais ajouter l’ouverture d’un modal de login plus tard
-            //go to public/templates/login.html
-            window.location.href = "../../public/templates/login.html";
-        });
-    }
-
-    // Écouteur pour le bouton "Commencer maintenant" dans la section hero
+    // Écouteur pour le bouton "Commencer maintenant" dans la section hero et la section cta (s’il existe)
     const startBtn = document.querySelector(".hero-section .btn-success.btn-lg");
-    if (startBtn) {
-        startBtn.addEventListener("click", () => {
+    const startBtn2 = document.querySelector(".section-cta .btn.btn-success.btn-lg.me-3");
+     if (startBtn && startBtn2) {
+    [startBtn, startBtn2].forEach((btn) => {
+        btn.addEventListener("click", () => {
             console.log("Bouton 'Commencer maintenant' cliqué");
-            // Ici je pourrais rediriger vers une autre page ou déclencher une action
-            //go to public/templates/signin.html
-            window.location.href = "../../public/templates/signin.html";
+            // Ici je pourrais ajouter l’ouverture d’un modal de login plus tard
+            const modalSignIn = document.querySelector("#modalRegister");
+            const modalSign = new bootstrap.Modal(modalSignIn);
+            modalSign.show();
         });
-    }
+    });
+     }
 
-// Écouteur pour le bouton "inscrivez-vous maintenant" dans la section hero
-    const startBtn2 = document.querySelector(".section-cta .btn-success.btn-lg.me-3");
-    if (startBtn2) {
-        startBtn2.addEventListener("click", () => {
-            console.log("Bouton 'inscrivez-vous maintenant' cliqué");
-            // Ici je pourrais rediriger vers une autre page ou déclencher une action
-            //go to public/templates/signin.html
-            window.location.href = "../../public/templates/signin.html";
-        });
-    }
 
     // Écouteur pour le formulaire de recherche dans la page de covoiturage (s’il existe)
     const forms = document.querySelectorAll("form");
@@ -60,10 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const date = document.getElementById("date")?.value;
             console.log("Formulaire de recherche envoyé :", { departure, arrival, date });
             // Ici je pourrais faire le traitement de la recherche (appel API, etc.)
+
         });
     }
 
-    // Écouteur pour le formulaire de filtre dans la page de covoiturage (s’il existe aussi)
+    // Écouteur pour le formulaire de filtre dans la page de covoiturage (s’il existe)
     if (forms.length > 1) {
         forms[1].addEventListener("submit", (e) => {
             e.preventDefault(); // je bloque l'envoi normal du formulaire
@@ -73,6 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const ecological = document.getElementById("ecological")?.value;
             console.log("Formulaire de filtre envoyé :", { price, duration, rating, ecological });
             // Ici je pourrais faire le filtrage côté client ou envoyer les données au serveur
+
         });
     }
 });
+

@@ -26,42 +26,42 @@
     <meta property="og:title" content="EcoRide - Voyager autrement">
     <meta property="og:description" content="EcoRide est votre partenaire pour des déplacements écologiques, économiques et responsables. Rejoignez une communauté qui partage vos valeurs.">
     <!-- lien vers le logo -->
-    <meta property="og:image" content="../../public/asset/img/logo.png">
+    <meta property="og:image" content="../public/asset/img/logo.png">
     <!-- URL du site -->
     <meta property="og:url" content="http://127.0.0.1:80/public/index.html">
 
     <!-- Favicon pour l'onglet du navigateur -->
-    <link rel="icon" href="../../public/asset/img/logo.png" type="image/x-icon">
+    <link rel="icon" href="/public/asset/img/logo.png" type="image/x-icon">
 
     <!-- Titre de la page -->
     <title>EcoRide - Voyager autrement</title>
 
-    <!-- Lien vers la police de caracteres Open Sans -->
+    <!-- Lien vers la police de characters Open Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Lien vers la librairie Bootstrap (CSS) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
     <!-- Lien vers la feuille de style personnalisée -->
-    <link rel="stylesheet" href="../../public/asset/css/styles.css">
+    <link rel="stylesheet" href="/public/asset/css/styles.css">
 
     <!-- Lien vers Font Awesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 <!-- ================================================= -->
-<!-- Barre de navigation (Header) -->
+<!-- Tête de page et barre de navigation (Header) -->
 <!-- ================================================= -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container border border-2 rounded-5 ">
         <!-- Logo et nom de la marque -->
-        <a class="navbar-brand d-flex align-items-center" href="../../public/index.html">
+        <a class="navbar-brand d-flex align-items-center" href="/public/index.html">
             <!-- Image du logo -->
-            <img alt="Logo EcoRide" class="me-2 rounded-circle" src="../../public/asset/img/logo.png">
+            <img alt="Logo EcoRide" class="me-2 rounded-circle" src="/public/asset/img/logo.png">
             <span class="fw-bold">EcoRide</span>
         </a>
 
-        <!-- Bouton pour afficher/masquer le menu sur mobile ( burger menu ) -->
+        <!-- Bouton pour afficher/masquer le menu sur mobile (burger menu) -->
         <button type="button"
                 class="navbar-toggler"
                 data-bs-toggle="collapse"
@@ -73,80 +73,54 @@
         </button>
 
         <!-- Menu de navigation -->
-        <div class="collapse navbar-collapse justify-content-between text-center pb-1 pt-1" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse justify-content-between text-center" id="navbarSupportedContent">
             <!-- Liens centrés -->
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a aria-current="page" class="nav-link active" href="../../public/index.html">Accueil</a>
+                    <!-- Modified link href -->
+                    <a aria-current="page" class="nav-link active" href="/public/index.html">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../../public/templates/covoiturage.html">Covoiturage</a>
+                    <a class="nav-link" href="/public/templates/covoiturage.html">Covoiturage</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../../public/templates/contact.html">Contact</a>
+                    <a class="nav-link" href="/public/templates/contact.html">Contact</a>
                 </li>
             </ul>
             <!-- Bouton "Connexion" vert arrondi -->
-            <a class="btn btn-success btn-login" href="#">Connexion</a>
+            <a class="btn btn-success btn-login " href="#">Connexion</a>
         </div>
     </div>
 </nav>
 
 <!-- ================================================= -->
-<!-- Login menue -->
+<!-- modal de login -->
 <!-- ================================================= -->
-<section class="d-flex justify-content-center align-items-center pt-5">
-    <div class="container mt-5 ">
-        <div class="row">
-            <div class="col-lg-6 col-md-8 col-sm-10 mx-auto">
-                <div class="card border-0 shadow-sm">
-                    <div class="card-body">
-                        <h2 class="text-center">Connexion</h2>
-                        <form action="#" method="post">
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Adresse e-mail</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label">Mot de passe</label>
-                                <input type="password" class="form-control" id="password" name="password" required>
-                            </div>
-                            <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-success">Se connecter</button>
-                            </div>
-                        </form>
-                        <div class="text-center mt-3">
-                            <a href="#">Mot de passe oublié ?</a>
-                        </div>
+<section class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLoginLabel">Connexion à EcoRide</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="emailLogin" class="form-label">Adresse e-mail</label>
+                        <input type="email" class="form-control" id="emailLogin" required>
                     </div>
-                </div>
+                    <div class="mb-3">
+                        <label for="passwordLogin" class="form-label">Mot de passe</label>
+                        <input type="password" class="form-control" id="passwordLogin" required>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Se connecter</button>
+                </form>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ================================================= -->
-<!-- Pied de page (Footer) -->
-<!-- ================================================= -->
-<footer class="py-4 text-bg-dark">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-        <div class="mb-3 mb-md-0">
-            <a class="text-white text-decoration-none me-3" href="#">Accueil</a>
-            <a class="text-white text-decoration-none me-3" href="#">Nos Services</a>
-            <a class="text-white text-decoration-none me-3" href="#">Nous contacter</a>
-            <a class="text-white text-decoration-none" href="#">Nous Rejoindre</a>
-        </div>
-        <!-- Copyright -->
-        <div class="text-center">
-            © 2025 EcoRide - Voyager autrement. Tous droits réservés.
-        </div>
-    </div>
-</footer>
-
-<!-- ================================================= -->
-<!-- Inclusion des scripts Bootstrap et personnalisés -->
-<!-- ================================================= -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../../public/asset/js/main.js"></script>
+<script src="/public/asset/js/main.js"></script>
 </body>
 </html>
