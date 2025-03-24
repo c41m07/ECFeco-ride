@@ -50,7 +50,7 @@
 </head>
 <body>
 <!-- ================================================= -->
-<!-- Tête de page et import barre de la barre de navigation (Header) -->
+<!-- Tête de page (Header) -->
 <!-- ================================================= -->
 <header>
     <!-- ================================================= -->
@@ -69,10 +69,10 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <form id="registerForm">
                     <div class="mb-3">
-                        <label for="name" class="form-label">Nom complet</label>
-                        <input type="text" class="form-control" id="name" required>
+                        <label for="nameSignIn" class="form-label">Nom complet</label>
+                        <input type="text" class="form-control" id="nameSignIn" required>
                     </div>
                     <div class="mb-3">
                         <label for="emailSignIn" class="form-label">Adresse e-mail</label>
@@ -82,7 +82,7 @@
                         <label for="passwordSignIn" class="form-label">Mot de passe</label>
                         <input type="password" class="form-control" id="passwordSignIn" required>
                     </div>
-                    <button type="submit" class="btn btn-success w-100">S'inscrire</button>
+                    <button type="submit" class="btn btn-success w-100" >S'inscrire</button>
                 </form>
             </div>
         </div>
@@ -102,7 +102,7 @@
                     EcoRide est votre partenaire pour des déplacements écologiques, économiques et responsables.
                     Rejoignez une communauté qui partage vos valeurs.
                 </p>
-                <a class="btn btn-success btn-lg" href="#">Commencer maintenant !</a>
+                <a class="btn btn-success btn-lg" href="#" id="btnSignIn">Commencer maintenant !</a>
             </div>
             <!-- Image d'illustration de la Hero Section -->
             <div class="col-md-6 text-center mt-4 mt-md-0">
@@ -385,7 +385,7 @@
         <p class="mb-4">
             Inscrivez-vous dès aujourd’hui pour commencer à voyager de manière écologique et responsable.
         </p>
-        <a class="btn btn-success btn-lg me-3" href="#">Inscrivez-vous maintenant !</a>
+        <a class="btn btn-success btn-lg me-3" href="#" id="btnSignIn2">Inscrivez-vous maintenant !</a>
         <a class="btn btn-outline-success btn-lg" href="#">Découvrir EcoRide</a>
     </div>
 </section>
