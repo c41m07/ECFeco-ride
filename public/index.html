@@ -5,33 +5,35 @@
     <meta charset="UTF-8">
 
     <!-- Compatibilité avec Internet Explorer -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
 
     <!-- Rendre la page responsive sur mobile -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <!-- Description pour le SEO -->
-    <meta name="description" content="EcoRide est votre partenaire pour des déplacements écologiques, économiques et responsables. Rejoignez une communauté qui partage vos valeurs.">
+    <meta content="EcoRide est votre partenaire pour des déplacements écologiques, économiques et responsables. Rejoignez une communauté qui partage vos valeurs."
+          name="description">
 
     <!-- Mots-clés pour le SEO (optionnel : certains moteurs de recherche ne s'en servent plus) -->
-    <meta name="keywords" content="EcoRide, déplacements écologiques, mobilité durable, voyage responsable">
+    <meta content="EcoRide, déplacements écologiques, mobilité durable, voyage responsable" name="keywords">
 
     <!-- Meta Robots pour indiquer aux moteurs de recherche comment indexer la page -->
-    <meta name="robots" content="index,follow">
+    <meta content="index,follow" name="robots">
 
     <!-- Couleur du thème pour certains navigateurs mobiles -->
-    <meta name="theme-color" content="#ffffff">
+    <meta content="#ffffff" name="theme-color">
 
     <!-- Open Graph pour le partage sur les réseaux sociaux -->
-    <meta property="og:title" content="EcoRide - Voyager autrement">
-    <meta property="og:description" content="EcoRide est votre partenaire pour des déplacements écologiques, économiques et responsables. Rejoignez une communauté qui partage vos valeurs.">
+    <meta content="EcoRide - Voyager autrement" property="og:title">
+    <meta content="EcoRide est votre partenaire pour des déplacements écologiques, économiques et responsables. Rejoignez une communauté qui partage vos valeurs."
+          property="og:description">
     <!-- lien vers le logo -->
-    <meta property="og:image" content="../public/asset/img/logo.png">
+    <meta content="../public/asset/img/logo.png" property="og:image">
     <!-- URL du site -->
-    <meta property="og:url" content="http://127.0.0.1:80/public/index.html">
+    <meta content="http://127.0.0.1:80/public/index.html" property="og:url">
 
     <!-- Favicon pour l'onglet du navigateur -->
-    <link rel="icon" href="../public/asset/img/logo.png" type="image/x-icon">
+    <link href="../public/asset/img/logo.png" rel="icon" type="image/x-icon">
 
     <!-- Titre de la page -->
     <title>EcoRide - Voyager autrement</title>
@@ -40,49 +42,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Lien vers la librairie Bootstrap (CSS) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Lien vers la feuille de style personnalisée -->
-    <link rel="stylesheet" href="../public/asset/css/styles.css">
+    <link href="../public/asset/css/styles.css" rel="stylesheet">
 
     <!-- Lien vers Font Awesome pour les icônes -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 <!-- ================================================= -->
-<!-- Tête de page (Header) -->
+<!-- * Tête de page (Header) -->
 <!-- ================================================= -->
 <header>
     <!-- ================================================= -->
-    <!-- Import de nav.html -->
+    <!-- * Import de nav.html -->
     <!-- ================================================= -->
 </header>
 
 <!-- ================================================= -->
-<!-- Section modal d'inscription -->
+<!-- * Section modal d'inscription -->
 <!-- ================================================= -->
-<section class="modal fade" id="modalRegister" tabindex="-1" aria-labelledby="modalRegisterLabel" aria-hidden="true">
+<section aria-hidden="true" aria-labelledby="modalRegisterLabel" class="modal fade" id="modalRegister" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modalRegisterLabel">Inscription à EcoRide</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                <button aria-label="Fermer" class="btn-close" data-bs-dismiss="modal" type="button"></button>
             </div>
             <div class="modal-body">
                 <form id="registerForm">
                     <div class="mb-3">
-                        <label for="nameSignIn" class="form-label">Nom complet</label>
-                        <input type="text" class="form-control" id="nameSignIn" required>
+                        <label class="form-label" for="nameSignIn">Nom complet</label>
+                        <input class="form-control" id="nameSignIn" required type="text">
                     </div>
                     <div class="mb-3">
-                        <label for="emailSignIn" class="form-label">Adresse e-mail</label>
-                        <input type="email" class="form-control" id="emailSignIn" required>
+                        <label class="form-label" for="emailSignIn">Adresse e-mail</label>
+                        <input class="form-control" id="emailSignIn" required type="email">
                     </div>
                     <div class="mb-3">
-                        <label for="passwordSignIn" class="form-label">Mot de passe</label>
-                        <input type="password" class="form-control" id="passwordSignIn" required>
+                        <label class="form-label" for="passwordSignIn">Mot de passe</label>
+                        <input class="form-control" id="passwordSignIn" required type="password">
                     </div>
-                    <button type="submit" class="btn btn-success w-100" >S'inscrire</button>
+                    <button class="btn btn-success w-100" type="submit">S'inscrire</button>
                 </form>
             </div>
         </div>
@@ -90,9 +92,9 @@
 </section>
 
 <!-- ================================================= -->
-<!-- Section Hero (Bannière principale) -->
+<!-- * Section Hero (Bannière principale) -->
 <!-- ================================================= -->
-<section class="hero-section py-5" >
+<section class="hero-section py-5">
     <div class="container">
         <div class="row align-items-center">
             <!-- Zone de texte dans la Hero Section -->
@@ -110,14 +112,14 @@
             </div>
         </div>
     </div>
-</section >
+</section>
 
 <!-- ================================================= -->
-<!-- Section Témoignages (Exemples d’utilisateurs) -->
+<!-- * Section Témoignages (Exemples d’utilisateurs) -->
 <!-- ================================================= -->
 <section class="py-5 bg-light">
     <div class="container">
-            <h2 class="text-center mb-5">Ils nous font confiance.</h2>
+        <h2 class="text-center mb-5">Ils nous font confiance.</h2>
         <div class="row row-cols-1 row-cols-md-3 g-4 ">
             <!-- Premier témoignage -->
             <div class="col">
@@ -166,7 +168,7 @@
 </section>
 
 <!-- ================================================= -->
-<!-- Section Engagement / Valeurs -->
+<!-- * Section Engagement / Valeurs -->
 <!-- ================================================= -->
 <section class="py-5">
     <div class="container">
@@ -209,7 +211,7 @@
 </section>
 
 <!-- ================================================= -->
-<!-- Section Vision pour l’avenir -->
+<!-- * Section Vision pour l’avenir -->
 <!-- ================================================= -->
 <section class="py-5 text-white vision-section">
     <div class="container">
@@ -264,7 +266,7 @@
 </section>
 
 <!-- ================================================= -->
-<!-- Section Avantages -->
+<!-- * Section Avantages -->
 <!-- ================================================= -->
 <section class="py-5 text-white section-dark-green">
     <div class="container">
@@ -336,7 +338,7 @@
 </section>
 
 <!-- ================================================= -->
-<!-- Section Témoignages supplémentaires (Exemples d’utilisateurs) -->
+<!-- * Section Témoignages supplémentaires (Exemples d’utilisateurs) -->
 <!-- ================================================= -->
 <section class="py-5 bg-light">
     <div class="container">
@@ -377,7 +379,7 @@
 </section>
 
 <!-- ================================================= -->
-<!-- Section Appel à l'action finale (CTA - call to action) -->
+<!-- * Section Appel à l'action finale (CTA - call to action) -->
 <!-- ================================================= -->
 <section class="py-5 text-center section-cta">
     <div class="container">
@@ -391,7 +393,7 @@
 </section>
 
 <!-- ================================================= -->
-<!-- Pied de page (Footer) -->
+<!-- * Pied de page (Footer) -->
 <!-- ================================================= -->
 <footer class="py-4 text-bg-dark">
     <!-- ================================================= -->
@@ -400,7 +402,7 @@
 </footer>
 
 <!-- ================================================= -->
-<!-- Inclusion des scripts Bootstrap et personnalisés -->
+<!-- * Inclusion des scripts Bootstrap et personnalisés-->
 <!-- ================================================= -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../public/asset/js/main.js"></script>

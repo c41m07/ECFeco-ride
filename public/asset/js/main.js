@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     e.preventDefault(); // j’empêche l’envoi classique du formulaire
                     const email = document.getElementById("emailLogin")?.value;
                     const password = document.getElementById("passwordLogin")?.value;
-                    console.log("Formulaire de connexion envoyé :", { email, password });
+                    console.log("Formulaire de connexion envoyé :", {email, password});
                     // Ici je pourrais ajouter un appel à une API pour vérifier les identifiants
 
                 });
@@ -74,7 +74,7 @@ if (startBtn || startBtn2) {
             const name = document.getElementById("nameSignIn")?.value;
             const email = document.getElementById("emailSignIn")?.value;
             const password = document.getElementById("passwordSignIn")?.value;
-            console.log("Formulaire d’inscription envoyé :", { name, email, password });
+            console.log("Formulaire d’inscription envoyé :", {name, email, password});
             // Ici je pourrais ajouter un appel à une API pour enregistrer le nouvel utilisateur
 
         });
@@ -90,10 +90,11 @@ if (searchForm) {
         const departure = document.getElementById("departure")?.value;
         const arrival = document.getElementById("arrival")?.value;
         const date = document.getElementById("date")?.value;
-        console.log("Formulaire de recherche envoyé :", { departure, arrival, date });
+        console.log("Formulaire de recherche envoyé :", {departure, arrival, date});
         // Ici je pourrais faire le traitement de la recherche (appel API, etc.)
 
-    });}
+    });
+}
 
 
 // Si le bouton existe, j’ajoute un écouteur d’événement au clic pour filtrer les offres
@@ -105,10 +106,11 @@ if (filterForm) {
         const duration = document.getElementById("duration")?.value;
         const rating = document.getElementById("rating")?.value;
         const ecological = document.getElementById("ecological")?.value;
-        console.log("Formulaire de filtre envoyé :", { price, duration, rating, ecological });
+        console.log("Formulaire de filtre envoyé :", {price, duration, rating, ecological});
         // Ici je pourrais faire le filtrage côté client ou envoyer les données au serveur
 
-    });}
+    });
+}
 
 
 // si le bouton existe, j’ajoute un écouteur d’événement au clic pour envoyer le formulaire de contact
@@ -119,7 +121,8 @@ if (contact) {
         const name = document.getElementById("name")?.value;
         const email = document.getElementById("email")?.value;
         const message = document.getElementById("message")?.value;
-        console.log("Formulaire de contact envoyé :", { name, email, message });
+        console.log("Formulaire de contact envoyé :", {name, email, message});
         // Ici je pourrais ajouter un appel à une API pour envoyer le message par email
 
-    });}
+    });
+}

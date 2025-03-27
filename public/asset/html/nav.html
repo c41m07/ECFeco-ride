@@ -11,13 +11,13 @@
         </a>
 
         <!-- Bouton pour afficher/masquer le menu sur mobile (burger menu) -->
-        <button type="button"
-                class="navbar-toggler"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
+        <button aria-controls="navbarSupportedContent"
                 aria-expanded="false"
-                aria-label="Toggle navigation">
+                aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-bs-target="#navbarSupportedContent"
+                data-bs-toggle="collapse"
+                type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -45,24 +45,24 @@
 <!-- ================================================= -->
 <!-- modal de login -->
 <!-- ================================================= -->
-<section class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
+<section aria-hidden="true" aria-labelledby="modalLoginLabel" class="modal fade" id="modalLogin" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modalLoginLabel">Connexion à EcoRide</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                <button aria-label="Fermer" class="btn-close" data-bs-dismiss="modal" type="button"></button>
             </div>
             <div class="modal-body">
                 <form id="">
                     <div class="mb-3">
-                        <label for="emailLogin" class="form-label">Adresse e-mail</label>
-                        <input type="email" class="form-control" id="emailLogin" required>
+                        <label class="form-label" for="emailLogin">Adresse e-mail</label>
+                        <input class="form-control" id="emailLogin" required type="email">
                     </div>
                     <div class="mb-3">
-                        <label for="passwordLogin" class="form-label">Mot de passe</label>
-                        <input type="password" class="form-control" id="passwordLogin" required>
+                        <label class="form-label" for="passwordLogin">Mot de passe</label>
+                        <input class="form-control" id="passwordLogin" required type="password">
                     </div>
-                    <button type="submit" class="btn btn-success w-100" id="login-form">Se connecter</button>
+                    <button class="btn btn-success w-100" id="login-form" type="submit">Se connecter</button>
                 </form>
             </div>
         </div>
