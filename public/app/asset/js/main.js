@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //import de nav.html dans le header et footer.html dans le footer
     const header = document.querySelector("header");
     const footer = document.querySelector("footer");
-    fetch("/public/asset/html/nav.html")
+    fetch("/asset/html/nav.html")
         .then((response) => response.text())
         .then((data) => {
             header.innerHTML = data;
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             }
         });
-    fetch("/public/asset/html/footer.html")
+    fetch("/asset/html/footer.html")
         .then((response) => response.text())
         .then((data) => {
             footer.innerHTML = data;

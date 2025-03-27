@@ -28,12 +28,12 @@
     <meta content="EcoRide est votre partenaire pour des déplacements écologiques, économiques et responsables. Rejoignez une communauté qui partage vos valeurs."
           property="og:description">
     <!-- lien vers le logo -->
-    <meta content="../public/asset/img/logo.png" property="og:image">
+    <meta content="/asset/img/logo.png" property="og:image">
     <!-- URL du site -->
-    <meta content="http://127.0.0.1:80/public/index.html" property="og:url">
+    <meta content="http://127.0.0.1:80/index.html" property="og:url">
 
     <!-- Favicon pour l'onglet du navigateur -->
-    <link href="../public/asset/img/logo.png" rel="icon" type="image/x-icon">
+    <link href="asset/img/logo.png" rel="icon" type="image/x-icon">
 
     <!-- Titre de la page -->
     <title>EcoRide - Voyager autrement</title>
@@ -45,7 +45,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Lien vers la feuille de style personnalisée -->
-    <link href="../public/asset/css/styles.css" rel="stylesheet">
+    <link href="/asset/css/styles.css" rel="stylesheet">
 
     <!-- Lien vers Font Awesome pour les icônes -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -108,7 +108,7 @@
             </div>
             <!-- Image d'illustration de la Hero Section -->
             <div class="col-md-6 text-center mt-4 mt-md-0">
-                <img alt="Illustration EcoRide" class="img-fluid rounded" src="../public/asset/img/paysage2.jpg">
+                <img alt="Illustration EcoRide" class="img-fluid rounded" src="/asset/img/paysage2.jpg">
             </div>
         </div>
     </div>
@@ -126,7 +126,7 @@
                 <div class="card h-100 text-center p-3 comment-card">
                     <img alt="Marie Dupont"
                          class="card-img-top rounded-circle mx-auto mt-3"
-                         src="../public/asset/img/voiture1.jpeg">
+                         src="/asset/img/voiture1.jpeg">
                     <div class="card-body">
                         <h5 class="card-title">Marie Dupont</h5>
                         <p class="card-text">Utilisatrice d'EcoRide</p>
@@ -140,7 +140,7 @@
                 <div class="card h-100 text-center p-3 comment-card">
                     <img alt="Jean Martin"
                          class="card-img-top rounded-circle mx-auto mt-3"
-                         src="../public/asset/img/voiture2.jpeg">
+                         src="/asset/img/voiture2.jpeg">
                     <div class="card-body">
                         <h5 class="card-title">Jean Martin</h5>
                         <p class="card-text">Conducteur EcoRide</p>
@@ -154,7 +154,7 @@
                 <div class="card h-100 text-center p-3 comment-card">
                     <img alt="Claire Leroy"
                          class="card-img-top rounded-circle mx-auto mt-3"
-                         src="../public/asset/img/voiture4.jpeg">
+                         src="/asset/img/voiture4.jpeg">
                     <div class="card-body">
                         <h5 class="card-title">Claire Leroy</h5>
                         <p class="card-text">Ambassadrice écologique</p>
@@ -177,7 +177,7 @@
             <div class="col-md-6 mb-4 mb-md-0">
                 <img alt="Ville éco-responsable"
                      class="img-fluid rounded"
-                     src="../public/asset/img/voiture3.jpeg">
+                     src="/asset/img/voiture3.jpeg">
             </div>
             <!-- Texte et statistiques -->
             <div class="col-md-6">
@@ -405,6 +405,6 @@
 <!-- * Inclusion des scripts Bootstrap et personnalisés-->
 <!-- ================================================= -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../public/asset/js/main.js"></script>
+<script src="/asset/js/main.js"></script>
 </body>
 </html>
