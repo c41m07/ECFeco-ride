@@ -1,6 +1,7 @@
 
 
 php -S 127.0.0.1:80
+test pour les injection <script>alert('faille xss detecter')</script>
 
 ```
  ____      __      ___  ___  ___ 

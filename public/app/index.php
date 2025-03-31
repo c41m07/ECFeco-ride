@@ -78,11 +78,12 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="emailSignIn">Adresse e-mail</label>
-                        <input class="form-control" id="emailSignIn" required type="email">
+                        <input class="form-control" id="emailSignIn" required type="email" autocomplete="current-email">
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="passwordSignIn">Mot de passe</label>
-                        <input class="form-control" id="passwordSignIn" required type="password">
+                        <input class="form-control" id="passwordSignIn" required type="password"
+                               autocomplete="current-password">
                     </div>
                     <button class="btn btn-success w-100" type="submit">S'inscrire</button>
                 </form>
@@ -392,6 +393,7 @@
     </div>
 </section>
 
+
 <!-- ================================================= -->
 <!-- * Pied de page (Footer) -->
 <!-- ================================================= -->
@@ -405,6 +407,7 @@
 <!-- * Inclusion des scripts Bootstrap et personnalisés-->
 <!-- ================================================= -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/asset/js/main.js"></script>
+<script type="module" src="/asset/js/app.js"></script>
+
 </body>
 </html>
