@@ -1,0 +1,25 @@
+networks:
+  backend:
+
+services:
+  database:
+    image: mariadb
+    container_name: ecf_bdd
+    environment:
+      MARIADB_ROOT_PASSWORD: dev
+    networks:
+      - backend
+    volumes:
+      - ./mariadb:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  app:
+    container_name: ecf_app
+    build: docker/php
+    networks:
+      - backend
+    volumes:
+      - ./app:/var/www/html
+    ports:
+      - "80:80"

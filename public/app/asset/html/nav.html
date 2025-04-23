@@ -1,0 +1,58 @@
+<!-- ================================================= -->
+<!-- Tête de page et barre de navigation (Header) -->
+<!-- ================================================= -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container border border-2 rounded-5 ">
+        <!-- Logo et nom de la marque -->
+        <a class="navbar-brand d-flex align-items-center" href="/app/index.php">
+            <!-- Image du logo -->
+            <img alt="Logo EcoRide" class="me-2 rounded-circle" src="/asset/img/logo.png">
+            <span class="fw-bold">EcoRide</span>
+        </a>
+
+        <!-- Bouton pour afficher/masquer le menu sur mobile (burger menu) -->
+        <button aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-bs-target="#navbarSupportedContent"
+                data-bs-toggle="collapse"
+                type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu de navigation -->
+        <div class="collapse navbar-collapse justify-content-between text-center" id="navbarSupportedContent">
+            <!-- Liens centrés -->
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <!-- Modified link href -->
+                    <a aria-current="page" class="nav-link active" href="/app/index.php">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/templates/covoiturage.html">Covoiturage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/templates/contact.html">Contact</a>
+                </li>
+            </ul>
+            <!-- Bouton "Connexion" vert arrondi -->
+            <a class="btn btn-success btn-login " href="#">Connexion</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ================================================= -->
+<!-- modal de login -->
+<!-- ================================================= -->
+<section aria-hidden="true" aria-labelledby="modalLoginLabel" class="modal fade" id="modalLogin" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLoginLabel">Connexion à EcoRide</h5>
+                <button aria-label="Fermer" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label class="form-label
